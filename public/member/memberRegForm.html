@@ -13,14 +13,26 @@
 			text-align: center;
 			margin: 5% 0;
 			font-family: 'OTWelcomeBA';
+			background-color: #353535;
 		}
 		
 		.container {
-			margin: 2% 15%;
 			text-align: center;
 		}
 		
 		span {
+			text-align: center;
+		}
+		
+		.aaa {
+			margin: 2% 20%;
+		}
+		
+		h5, hr {
+			color: white;
+		}
+		
+		.form-control, .input-group-text {
 			text-align: center;
 		}
 		
@@ -30,6 +42,7 @@
 <body>
 
 <!-- start -->
+<div class="aaa">
 <nav class="navbar navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
   	<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -37,7 +50,7 @@
     </button>
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <h4 class="offcanvas-title" id="offcanvasNavbarLabel">로그인</h4>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
@@ -64,12 +77,11 @@
         </ul>
       </div>
     </div>
-    <a class="navbar-brand" href="#">J</a>
   </div>
 </nav>
     <br><br><br><br><h1></h1><br><br><br>
     <div class="container">
-    	<div class="col-4">
+    	<div class="col-6">
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
 					<a class="nav-link" href="#">코드그룹관리</a>
@@ -83,81 +95,259 @@
 			</ul>
 		</div>
 	</div>
-    <hr>
-
+    <hr><br>
 	<div class="container">
 		<div class="row justify content center">
 			<div class="col-4">
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1" style="width: 100px;">구분</span>
-					<input type="text" class="form-control" placeholder="신입/경력" aria-label="career" aria-describedby="basic-addon1" style="width: 150px;">
+					<input type="text" class="form-control" placeholder="신입/경력" style="width: 150px;">
 				</div>
 			</div>
 			<div class="col-4">
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1" style="width: 100px;">분야</span>
-					<input type="text" class="form-control" placeholder="분야" aria-label="job" aria-describedby="basic-addon1" style="width: 150px;">
+					<input type="text" class="form-control" placeholder="분야" style="width: 150px;">
 				</div>
 			</div>
 			<div class="col-4">
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1" style="width: 100px;">희망연봉</span>
-					<input type="text" class="form-control" placeholder="회사내규에 따름" aria-label="salary" aria-describedby="basic-addon1" style="width: 150px;">
+					<input type="text" class="form-control" placeholder="회사내규에 따름" style="width: 150px;">
 				</div>
 			</div>
 		</div>
 		<hr>
 	</div>
-	
+	<br>
 	<div class="container">
-		<div class="row gx-5 justify content center">
-			<div class="col-4">
-				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon1" style="width: 100px;">한글이름</span>
-					<input type="text" class="form-control" placeholder="이름" aria-label="korname" aria-describedby="basic-addon1" style="width: 150px;">
-				</div>
+		<h5 style="text-align: left;">* 기본정보</h5>
+		<div class="row">
+			<div class="col-2">
+				<div class="row">
+					<div class="input-group">
+						<span class="input-group-text" style="width: 15rem;">사진</span>
+					</div>
+					<div class="input-group">
+						<input type="file" class="form-control" id="inputGroupFile01" style="height: 10rem;">
+					</div>
+				</div>	
 			</div>
-			<div class="col-4">
-				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon1" style="width: 100px;">영문이름</span>
-					<input type="text" class="form-control" placeholder="name" aria-label="engname" aria-describedby="basic-addon1" style="width: 150px;">
+			<div class="col-10">
+				<div class="row justify content center">
+					<div class="col-6">
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1" style="width: 100px;">성명(한글)</span>
+							<input type="text" class="form-control" placeholder="이름" style="width: 150px;">
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1" style="width: 100px;">성명(영문)</span>
+							<input type="text" class="form-control" placeholder="name" style="width: 150px;">
+						</div>
+					</div>	
+				</div>
+				<div class="row justify content center">
+					<div class="col-6">
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1" style="width: 100px;">생년월일</span>
+							<input type="text" class="form-control" placeholder="생년월일8자리" style="width: 150px;">
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1" style="width: 100px;">성별</span>
+							<input type="text" class="form-control" style="width: 150px;">
+						</div>
+					</div>	
+				</div>
+				<div class="row justify content center">
+					<div class="col-6">
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1" style="width: 100px;">전화번호</span>
+							<input type="text" class="form-control" style="width: 150px;">
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1" style="width: 100px;">이메일주소</span>
+							<input type="text" class="form-control" style="width: 150px;">
+						</div>
+					</div>	
+				</div>
+				<div class="row justify content center">
+					<div class="col-4">
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1" style="width: 100px;">우편번호</span>
+							<input type="text" class="form-control" placeholder="우편번호5자리" style="width: 120px;">
+						</div>
+					</div>
+					<div class="col-8">
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1" style="width: 100px;">주소</span>
+							<input type="text" class="form-control" placeholder="기본주소" style="width: 150px;">
+							<input type="text" class="form-control" placeholder="상세주소" style="width: 60px;">
+						</div>
+					</div>	
 				</div>
 			</div>
 		</div>
 	</div>
-	
+	<br><hr><br>
 	<div class="container">
-		<div class="row gx-5 justify content center">
-			<div class="col-4">
-				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon1" style="width: 100px;">이메일주소</span>
-					<input type="text" class="form-control" placeholder="이메일" aria-label="email" aria-describedby="basic-addon1" style="width: 150px;">
-				</div>
+		<h5 style="text-align: left;">* 학력사항</h5>
+		<div class="row gx-1 justify content center">
+			<div class="col-3">
+				<span class="input-group-text" id="basic-addon1">재학기간</span>
+			</div>
+			<div class="col-3">
+				<span class="input-group-text" id="basic-addon1">학교명</span>
+			</div>
+			<div class="col-3">
+				<span class="input-group-text" id="basic-addon1">전공</span>
+			</div>
+			<div class="col-1">
+				<span class="input-group-text" id="basic-addon1">성적</span>
 			</div>
 			<div class="col-2">
+				<span class="input-group-text" id="basic-addon1">소재지</span>
+			</div>
+		</div>
+		<div class="row gx-1 justify content center">
+			<div class="col-3">
 				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon1" style="width: 100px;">연락처</span>
-					<select class="form-select" aria-label="Default select example">
-						<option selected>선택</option>
-						<option value="1">010</option>
-						<option value="2">011</option>
-						<option value="3">019</option>
-					</select>
-					-
-					<div class="col-3">
-						<input type="text" class="form-control" aria-label="phone2" aria-describedby="basic-addon1" style="width: 150px;">
-					</div>
-					-
-					<div class="col-3">
-						<input type="text" class="form-control" aria-label="phone3" aria-describedby="basic-addon1" style="width: 150px;">
-					</div>
+					<input type="date" class="form-control" style="width:50px">~<input type="date" class="form-control" style="width:50px">
+				</div>
+			</div>
+			<div class="col-3">
+				<input type="text" class="form-control">
+			</div>
+			<div class="col-3">
+				<input type="text" class="form-control">
+			</div>
+			<div class="col-1">
+				<input type="text" class="form-control">
+			</div>
+			<div class="col-2">
+				<input type="text" class="form-control">
+			</div>
+		</div>
+	</div>
+	<br><hr><br>
+	<div class="container">
+		<h5 style="text-align: left;">* 외국어 · 자격/면허</h5>
+		<div class="row gx-2 justify content center">
+			<div class="col-4">
+				<span class="input-group-text" id="basic-addon1">시험/자격/면허명</span>
+			</div>
+			<div class="col-3">
+				<span class="input-group-text" id="basic-addon1">자격취득일</span>
+			</div>
+			<div class="col-2">
+				<span class="input-group-text" id="basic-addon1">점수</span>
+			</div>
+			<div class="col-3">
+				<span class="input-group-text" id="basic-addon1">발급기관</span>
+			</div>
+		</div>
+		<div class="row gx-2 justify content center">
+			<div class="col-4">
+				<input type="text" class="form-control">
+			</div>
+			<div class="col-3">
+				<input type="date" class="form-control">
+			</div>
+			<div class="col-2">
+				<input type="text" class="form-control">
+			</div>
+			<div class="col-3">
+				<input type="text" class="form-control">
+			</div>
+		</div>
+	</div>
+	<br><hr><br>
+	<div class="container">
+		<h5 style="text-align: left;">* 경력 및 활동사항</h5>
+		<div class="row gx-2 justify content center">
+			<div class="col-3">
+				<span class="input-group-text" id="basic-addon1">활동명</span>
+			</div>
+			<div class="col-3">
+				<span class="input-group-text" id="basic-addon1">기관명</span>
+			</div>
+			<div class="col-2">
+				<span class="input-group-text" id="basic-addon1">활동기간</span>
+			</div>
+			<div class="col-4">
+				<span class="input-group-text" id="basic-addon1">내용</span>
+			</div>
+		</div>
+		<div class="row gx-2 justify content center">
+			<div class="col-3">
+				<input type="text" class="form-control">
+			</div>
+			<div class="col-3">
+				<input type="text" class="form-control">
+			</div>
+			<div class="col-2">
+				<input type="date" class="form-control">
+			</div>
+			<div class="col-4">
+				<input type="text" class="form-control">
+			</div>
+		</div>
+	</div>
+	<br><hr><br>
+	<div class="container">
+		<h5 style="text-align: left;">* 기타사항</h5>
+		<div class="row gx-3 justify content center">
+			<div class="col-2">
+				<span class="input-group-text" id="basic-addon1">병역</span>
+			</div>
+			<div class="col-3">
+				<span class="input-group-text" id="basic-addon1">취미</span>
+			</div>
+			<div class="col-3">
+				<span class="input-group-text" id="basic-addon1">특기</span>
+			</div>
+			<div class="col-4">
+				<span class="input-group-text" id="basic-addon1">연락가능시간</span>
+			</div>
+		</div>
+		<div class="row gx-3 justify content center">
+			<div class="col-2">
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" placeholder="군필/미필/면제">
+				</div>
+			</div>
+			<div class="col-3">
+				<input type="text" class="form-control">
+			</div>
+			<div class="col-3">
+				<input type="text" class="form-control">
+			</div>
+			<div class="col-4">
+				<div class="input-group mb-3">
+					<input type="time" class="form-control" style="width:50px">~<input type="time" class="form-control" style="width:50px">
 				</div>
 			</div>
 		</div>
 	</div>
+<!-- 	
+	<button type="button" class="btn btn-light">
+	<i class="fa-solid fa-scissors"></i> 수정하기</button>
+ -->
+	<br>
+	<a href="./memberList.html">
+ 	<button type="button" class="btn btn-light">
+ 	<i class="fa-solid fa-circle-check"></i> 제출하기</button>
+	
+</div>
 
 <!-- end -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/7d63ec3c0a.js" crossorigin="anonymous"></script>
 </body>
 </html>
