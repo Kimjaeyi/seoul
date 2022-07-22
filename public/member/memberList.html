@@ -61,40 +61,25 @@
 <!-- start -->
 
 <nav class="navbar navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-  	<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">로그인</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+	<div class="container-fluid">
+		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+		<span class="navbar-toggler-icon"></span>
+	  	</button>
+		<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title" id="offcanvasNavbarLabel">로그인</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				<div class="mb-3 row">
+					<label for="exampleFormControlInput1" class="form-label">아이디</label>
+					<input type="text" class="form-control" id="exampleFormControlInput1">
+				</div>
+				<div class="mb-3 row">
+					<label for="exampleFormControlInput1" class="form-label">비밀번호</label>
+					<input type="password" class="form-control" id="exampleFormControlInput1">
+				</div>
+			</div>
+		</div>
+	</div>
 </nav>
     <br><br><br><br><h1></h1><br><br><br>
     <div class="abc">
@@ -107,7 +92,7 @@
 					<a class="nav-link" href="#">코드관리</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" aria current="page" href="#">회원관리</a>
+					<a class="nav-link active" aria-current="page" href="#">회원관리</a>
 				</li>
 			</ul>
 		</div>
