@@ -28,8 +28,8 @@
 			margin: 2% 20%;
 		}
 		
-		h5, hr {
-			color: white;
+		h5, hr, a:link {
+			color: white; 
 		}
 		
 		.form-control, .input-group-text {
@@ -42,311 +42,302 @@
 <body>
 
 <!-- start -->
-<div class="aaa">
-<nav class="navbar navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-  	<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h4 class="offcanvas-title" id="offcanvasNavbarLabel">로그인</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
-    <br><br><br><br><h1></h1><br><br><br>
-    <div class="container">
-    	<div class="col-6">
-			<ul class="nav nav-tabs">
-				<li class="nav-item">
-					<a class="nav-link" href="#">코드그룹관리</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">코드관리</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link active" aria current="page" href="#">회원관리</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-    <hr><br>
-	<div class="container">
-		<div class="row justify content center">
-			<div class="col-4">
-				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon1" style="width: 100px;">구분</span>
-					<input type="text" class="form-control" style="width: 150px;" value="신입">
-				</div>
-			</div>
-			<div class="col-4">
-				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon1" style="width: 100px;">분야</span>
-					<input type="text" class="form-control" value="정보보안" style="width: 150px;">
-				</div>
-			</div>
-			<div class="col-4">
-				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon1" style="width: 100px;">희망연봉</span>
-					<input type="text" class="form-control" value="3456만원" style="width: 150px;">
-				</div>
-			</div>
-		</div>
-		<hr>
-	</div>
-	<br>
-	<div class="container">
-		<h5 style="text-align: left;">* 기본정보</h5>
-		<div class="row">
-			<div class="col-2">
-				<div class="row">
-					<div class="input-group">
-						<span class="input-group-text" style="width: 15rem;">사진</span>
+	<div class="aaa">
+		<nav class="navbar navbar-dark bg-dark fixed-top">
+			<div class="container-fluid">
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+				<span class="navbar-toggler-icon"></span>
+			  	</button>
+				<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+					<div class="offcanvas-header">
+						<h4 class="offcanvas-title" id="offcanvasNavbarLabel">이메일로 로그인</h4>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					</div>
-					<div class="input-group">
-						<img src="../image/임시완.jpg" style="width: 8rem;">
-					</div>
-				</div>	
-			</div>
-			<div class="col-10">
-				<div class="row justify content center">
-					<div class="col-6">
-						<div class="input-group mb-3">
-							<span class="input-group-text" id="basic-addon1" style="width: 100px;">성명(한글)</span>
-							<input type="text" class="form-control" value="임시완" style="width: 150px;">
+					<div class="offcanvas-body">
+						<div class="mb-3 row">
+							<h6>아이디</h6>
+							<input type="text" class="form-control" id="inputid" placeholder="id@example.com">
+						</div>
+						<div class="mb-3 row">
+							<h6>비밀번호</h6>
+							<input type="password" class="form-control" id="inputpw" placeholder="password">
+						</div>
+						<br>
+						<div class="d-grid gap-2">
+							<button type="submit" class="btn btn-dark">Login</button>
 						</div>
 					</div>
-					<div class="col-6">
-						<div class="input-group mb-3">
-							<span class="input-group-text" id="basic-addon1" style="width: 100px;">성명(영문)</span>
-							<input type="text" class="form-control" value="Yim Siwan" style="width: 150px;">
+				</div>
+			</div>
+		</nav>
+	    <br><br><br><br><h1></h1><br><br><br>
+	    <div class="container">
+	    	<div class="col-6">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link" href="#">코드그룹관리</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">코드관리</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">회원관리</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	    <hr><br>
+		<div class="container">
+			<div class="row justify content center">
+				<div class="col-4">
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1" style="width: 100px;">구분</span>
+						<input type="text" class="form-control" style="width: 150px;" value="신입">
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1" style="width: 100px;">분야</span>
+						<input type="text" class="form-control" value="정보보안" style="width: 150px;">
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1" style="width: 100px;">희망연봉</span>
+						<input type="text" class="form-control" value="3456만원" style="width: 150px;">
+					</div>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<br>
+		<div class="container">
+			<h5 style="text-align: left;">* 기본정보</h5>
+			<div class="row">
+				<div class="col-2">
+					<div class="row">
+						<div class="input-group">
+							<span class="input-group-text" style="width: 15rem;">사진</span>
+						</div>
+						<div class="input-group">
+							<img src="../image/임시완.jpg" style="width: 8rem;">
 						</div>
 					</div>	
 				</div>
-				<div class="row justify content center">
-					<div class="col-6">
-						<div class="input-group mb-3">
-							<span class="input-group-text" id="basic-addon1" style="width: 100px;">생년월일</span>
-							<input type="text" class="form-control" value="1988.12.01" style="width: 150px;">
+				<div class="col-10">
+					<div class="row justify content center">
+						<div class="col-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1" style="width: 100px;">성명(한글)</span>
+								<input type="text" class="form-control" value="임시완" style="width: 150px;" readonly>
+							</div>
 						</div>
+						<div class="col-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1" style="width: 100px;">성명(영문)</span>
+								<input type="text" class="form-control" value="Yim Siwan" style="width: 150px;" readonly>
+							</div>
+						</div>	
 					</div>
-					<div class="col-6">
-						<div class="input-group mb-3">
-							<span class="input-group-text" id="basic-addon1" style="width: 100px;">성별</span>
-							<input type="text" class="form-control" value="남" style="width: 150px;">
+					<div class="row justify content center">
+						<div class="col-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1" style="width: 100px;">생년월일</span>
+								<input type="text" class="form-control" value="1988.12.01" style="width: 150px;" readonly>
+							</div>
 						</div>
-					</div>	
-				</div>
-				<div class="row justify content center">
-					<div class="col-6">
-						<div class="input-group mb-3">
-							<span class="input-group-text" id="basic-addon1" style="width: 100px;">전화번호</span>
-							<input type="text" class="form-control" value="010-1234-5678" style="width: 150px;">
-						</div>
+						<div class="col-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1" style="width: 100px;">성별</span>
+								<input type="text" class="form-control" value="남" style="width: 150px;" readonly>
+							</div>
+						</div>	
 					</div>
-					<div class="col-6">
-						<div class="input-group mb-3">
-							<span class="input-group-text" id="basic-addon1" style="width: 100px;">이메일주소</span>
-							<input type="text" class="form-control" value="ysw@naver.com" style="width: 150px;">
+					<div class="row justify content center">
+						<div class="col-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1" style="width: 100px;">전화번호</span>
+								<input type="text" class="form-control" value="010-1234-5678" style="width: 150px;" readonly>
+							</div>
 						</div>
-					</div>	
-				</div>
-				<div class="row justify content center">
-					<div class="col-4">
-						<div class="input-group mb-3">
-							<span class="input-group-text" id="basic-addon1" style="width: 100px;">우편번호</span>
-							<input type="text" class="form-control" value="12300" style="width: 120px;">
-						</div>
+						<div class="col-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1" style="width: 100px;">이메일주소</span>
+								<input type="text" class="form-control" value="ysw@naver.com" style="width: 150px;" readonly>
+							</div>
+						</div>	
 					</div>
-					<div class="col-8">
-						<div class="input-group mb-3">
-							<span class="input-group-text" id="basic-addon1" style="width: 100px;">주소</span>
-							<input type="text" class="form-control" value="서울시 중구 세종대로 110" style="width: 150px;">
-							<input type="text" class="form-control" value="1층" style="width: 60px;">
+					<div class="row justify content center">
+						<div class="col-4">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1" style="width: 100px;">우편번호</span>
+								<input type="text" class="form-control" value="12300" style="width: 120px;" readonly>
+							</div>
 						</div>
-					</div>	
+						<div class="col-8">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1" style="width: 100px;">주소</span>
+								<input type="text" class="form-control" value="서울시 중구 세종대로 110" style="width: 150px;" readonly>
+								<input type="text" class="form-control" value="1층" style="width: 60px;" readonly>
+							</div>
+						</div>	
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<br><hr><br>
-	<div class="container">
-		<h5 style="text-align: left;">* 학력사항</h5>
-		<div class="row gx-1 justify content center">
-			<div class="col-4">
-				<span class="input-group-text" id="basic-addon1">재학기간</span>
-			</div>
-			<div class="col-2">
-				<span class="input-group-text" id="basic-addon1">학교명</span>
-			</div>
-			<div class="col-2">
-				<span class="input-group-text" id="basic-addon1">전공</span>
-			</div>
-			<div class="col-2">
-				<span class="input-group-text" id="basic-addon1">성적</span>
-			</div>
-			<div class="col-2">
-				<span class="input-group-text" id="basic-addon1">소재지</span>
-			</div>
-		</div>
-		<div class="row gx-1 justify content center">
-			<div class="col-4">
-				<div class="input-group mb-3">
-					<input type="text" class="form-control" value="2007-03-05" style="width:70px">~
-					<input type="text" class="form-control" value="2014-02-14" style="width:70px">
+		<br><hr><br>
+		<div class="container">
+			<h5 style="text-align: left;">* 학력사항</h5>
+			<div class="row gx-1 justify content center">
+				<div class="col-4">
+					<span class="input-group-text" id="basic-addon1">재학기간</span>
+				</div>
+				<div class="col-2">
+					<span class="input-group-text" id="basic-addon1">학교명</span>
+				</div>
+				<div class="col-2">
+					<span class="input-group-text" id="basic-addon1">전공</span>
+				</div>
+				<div class="col-2">
+					<span class="input-group-text" id="basic-addon1">성적</span>
+				</div>
+				<div class="col-2">
+					<span class="input-group-text" id="basic-addon1">소재지</span>
 				</div>
 			</div>
-			<div class="col-2">
-				<input type="text" class="form-control" value="부산대학교">
-			</div>
-			<div class="col-2">
-				<input type="text" class="form-control" value="기계공학과">
-			</div>
-			<div class="col-2">
-				<input type="text" class="form-control" value="4.2/4.5">
-			</div>
-			<div class="col-2">
-				<input type="text" class="form-control" value="부산광역시">
-			</div>
-		</div>
-	</div>
-	<br><hr><br>
-	<div class="container">
-		<h5 style="text-align: left;">* 외국어 · 자격/면허</h5>
-		<div class="row gx-2 justify content center">
-			<div class="col-4">
-				<span class="input-group-text" id="basic-addon1">시험/자격/면허명</span>
-			</div>
-			<div class="col-3">
-				<span class="input-group-text" id="basic-addon1">자격취득일</span>
-			</div>
-			<div class="col-2">
-				<span class="input-group-text" id="basic-addon1">점수</span>
-			</div>
-			<div class="col-3">
-				<span class="input-group-text" id="basic-addon1">발급기관</span>
-			</div>
-		</div>
-		<div class="row gx-2 justify content center">
-			<div class="col-4">
-				<input type="text" class="form-control" value="일반기계기사">
-			</div>
-			<div class="col-3">
-				<input type="date" class="form-control" value="2013-06-12">
-			</div>
-			<div class="col-2">
-				<input type="text" class="form-control" value="-">
-			</div>
-			<div class="col-3">
-				<input type="text" class="form-control" value="한국산업인력공단">
-			</div>
-		</div>
-	</div>
-	<br><hr><br>
-	<div class="container">
-		<h5 style="text-align: left;">* 경력 및 활동사항</h5>
-		<div class="row gx-2 justify content center">
-			<div class="col-3">
-				<span class="input-group-text" id="basic-addon1">활동명</span>
-			</div>
-			<div class="col-3">
-				<span class="input-group-text" id="basic-addon1">기관명</span>
-			</div>
-			<div class="col-2">
-				<span class="input-group-text" id="basic-addon1">활동기간</span>
-			</div>
-			<div class="col-4">
-				<span class="input-group-text" id="basic-addon1">내용</span>
-			</div>
-		</div>
-		<div class="row gx-2 justify content center">
-			<div class="col-3">
-				<input type="text" class="form-control">
-			</div>
-			<div class="col-3">
-				<input type="text" class="form-control">
-			</div>
-			<div class="col-2">
-				<input type="date" class="form-control">
-			</div>
-			<div class="col-4">
-				<input type="text" class="form-control">
-			</div>
-		</div>
-	</div>
-	<br><hr><br>
-	<div class="container">
-		<h5 style="text-align: left;">* 기타사항</h5>
-		<div class="row gx-3 justify content center">
-			<div class="col-2">
-				<span class="input-group-text" id="basic-addon1">병역</span>
-			</div>
-			<div class="col-3">
-				<span class="input-group-text" id="basic-addon1">취미</span>
-			</div>
-			<div class="col-3">
-				<span class="input-group-text" id="basic-addon1">특기</span>
-			</div>
-			<div class="col-4">
-				<span class="input-group-text" id="basic-addon1">연락가능시간</span>
-			</div>
-		</div>
-		<div class="row gx-3 justify content center">
-			<div class="col-2">
-				<div class="input-group mb-3">
-					<input type="text" class="form-control" value="병장만기전역">
+			<div class="row gx-1 justify content center">
+				<div class="col-4">
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" value="2007-03-05" style="width:70px" readonly>~
+						<input type="text" class="form-control" value="2014-02-14" style="width:70px" readonly>
+					</div>
 				</div>
-			</div>
-			<div class="col-3">
-				<input type="text" class="form-control" value="코딩">
-			</div>
-			<div class="col-3">
-				<input type="text" class="form-control" value="큐브 맞추기">
-			</div>
-			<div class="col-4">
-				<div class="input-group mb-3">
-					<input type="text" class="form-control" value="오전 11시" style="width:50px">~
-					<input type="text" class="form-control" value="오후 16시" style="width:50px">
+				<div class="col-2">
+					<input type="text" class="form-control" value="부산대학교" readonly>
+				</div>
+				<div class="col-2">
+					<input type="text" class="form-control" value="기계공학과" readonly>
+				</div>
+				<div class="col-2">
+					<input type="text" class="form-control" value="4.2/4.5" readonly>
+				</div>
+				<div class="col-2">
+					<input type="text" class="form-control" value="부산광역시" readonly>
 				</div>
 			</div>
 		</div>
-	</div>
+		<br><hr><br>
+		<div class="container">
+			<h5 style="text-align: left;">* 외국어 · 자격/면허</h5>
+			<div class="row gx-2 justify content center">
+				<div class="col-4">
+					<span class="input-group-text" id="basic-addon1">시험/자격/면허명</span>
+				</div>
+				<div class="col-3">
+					<span class="input-group-text" id="basic-addon1">자격취득일</span>
+				</div>
+				<div class="col-2">
+					<span class="input-group-text" id="basic-addon1">점수</span>
+				</div>
+				<div class="col-3">
+					<span class="input-group-text" id="basic-addon1">발급기관</span>
+				</div>
+			</div>
+			<div class="row gx-2 justify content center">
+				<div class="col-4">
+					<input type="text" class="form-control" value="일반기계기사" readonly>
+				</div>
+				<div class="col-3">
+					<input type="date" class="form-control" value="2013-06-12" readonly>
+				</div>
+				<div class="col-2">
+					<input type="text" class="form-control" value="-" readonly>
+				</div>
+				<div class="col-3">
+					<input type="text" class="form-control" value="한국산업인력공단" readonly>
+				</div>
+			</div>
+		</div>
+		<br><hr><br>
+		<div class="container">
+			<h5 style="text-align: left;">* 경력 및 활동사항</h5>
+			<div class="row gx-2 justify content center">
+				<div class="col-3">
+					<span class="input-group-text" id="basic-addon1">활동명</span>
+				</div>
+				<div class="col-3">
+					<span class="input-group-text" id="basic-addon1">기관명</span>
+				</div>
+				<div class="col-2">
+					<span class="input-group-text" id="basic-addon1">활동기간</span>
+				</div>
+				<div class="col-4">
+					<span class="input-group-text" id="basic-addon1">내용</span>
+				</div>
+			</div>
+			<div class="row gx-2 justify content center">
+				<div class="col-3">
+					<input type="text" class="form-control">
+				</div>
+				<div class="col-3">
+					<input type="text" class="form-control">
+				</div>
+				<div class="col-2">
+					<input type="date" class="form-control">
+				</div>
+				<div class="col-4">
+					<input type="text" class="form-control">
+				</div>
+			</div>
+		</div>
+		<br><hr><br>
+		<div class="container">
+			<h5 style="text-align: left;">* 기타사항</h5>
+			<div class="row gx-3 justify content center">
+				<div class="col-2">
+					<span class="input-group-text" id="basic-addon1">병역</span>
+				</div>
+				<div class="col-3">
+					<span class="input-group-text" id="basic-addon1">취미</span>
+				</div>
+				<div class="col-3">
+					<span class="input-group-text" id="basic-addon1">특기</span>
+				</div>
+				<div class="col-4">
+					<span class="input-group-text" id="basic-addon1">연락가능시간</span>
+				</div>
+			</div>
+			<div class="row gx-3 justify content center">
+				<div class="col-2">
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" value="병장만기전역" readonly>
+					</div>
+				</div>
+				<div class="col-3">
+					<input type="text" class="form-control" value="코딩" readonly>
+				</div>
+				<div class="col-3">
+					<input type="text" class="form-control" value="큐브 맞추기" readonly>
+				</div>
+				<div class="col-4">
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" value="오전 11:00" style="width:50px" readonly>~
+						<input type="text" class="form-control" value="오후 16:00" style="width:50px" readonly>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<br>
+		<a href="memberModForm.html"></a>
+		<button type="button" class="btn btn-light">
+		<i class="fa-solid fa-scissors"></i> 수정하기</button>
 	
-	<br>
-	<a href="./memberModForm.html">
-	<button type="button" class="btn btn-light">
-	<i class="fa-solid fa-scissors"></i> 수정하기</button>
-
-	<a href="./memberList.html">
- 	<button type="button" class="btn btn-light">
- 	<i class="fa-solid fa-circle-check"></i> 제출하기</button>
-	
-</div>
+		<a href="memberList.html"></a>
+	 	<button type="button" class="btn btn-success">
+	 	<i class="fa-solid fa-circle-check"></i> 제출하기</button>
+		
+	</div>
 
 <!-- end -->
 
