@@ -18,6 +18,19 @@
 		i {
 			border: none;
 		}
+		
+		a:link {
+			color:white;
+			text-decoration: none;
+		}
+		a:visited {
+			color:white;
+			text-decoration: none;
+		}
+		a:hover {
+			color:mediumpurple;
+			text-decoration: none;
+		}
 		 
 		.searchhead{
 			background-color: rgba( 255, 255, 255, 0.5 );
@@ -67,15 +80,21 @@
 	  	</button>
 		<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 			<div class="offcanvas-header">
-				<h5 class="offcanvas-title" id="offcanvasNavbarLabel">로그인</h5>
+				<h5 class="offcanvas-title" id="offcanvasNavbarLabel">이메일로 로그인</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
 				<div class="mb-3 row">
-					<label for="exampleFormControlInput1" class="form-label">아이디</label>
-					<input type="text" class="form-control" id="exampleFormControlInput1">
+					<h5>아이디</h5>
+					<input type="text" class="form-control" id="inputid" placeholder="id@example.com">
 				</div>
 				<div class="mb-3 row">
-					<label for="exampleFormControlInput1" class="form-label">비밀번호</label>
-					<input type="password" class="form-control" id="exampleFormControlInput1">
+					<h5>비밀번호</h5>
+					<input type="password" class="form-control" id="inputpw" placeholder="password">
+				</div>
+				<br>
+				<div class="d-grid gap-2">
+					<button type="submit" class="btn btn-dark">Login</button>
 				</div>
 			</div>
 		</div>
@@ -167,13 +186,13 @@
 				</c:forEach>
  -->				
 				<tr>
-					<td><input type="checkbox" name="check"></td>
-					<td scope="row">7</td>
-					<td>경력</td>
-					<td>정보보안</td>
-					<td>ggd@gmail.com</td>
-					<td>고길동</td>
-					<td>2022.07.05</td>
+					<td><a href="memberView.html"><input type="checkbox" name="check"></a></td>
+					<td scope="row"><a href="memberView.html">7</a></td>
+					<td><a href="memberView.html">경력</a></td>
+					<td><a href="memberView.html">정보보안</a></td>
+					<td><a href="memberView.html">ysw@gmail.com</a></td>
+					<td><a href="memberView.html">임시완</a></td>
+					<td><a href="memberView.html">2022.07.05</a></td>
 				</tr>
 				<tr>
 					<td><input type="checkbox" name="check"></td>
@@ -249,7 +268,7 @@
 				</ul>
 			</nav>
 		 	<br><br>
-			<button class="btn btn-outline-danger" onclick="deleteValue();">
+			<button class="btn btn-danger" onclick="deleteValue();">
 				<i class="fa-solid fa-trash-can"></i> 삭제</button>
 			<div class="modal" tabindex="-1">
 			  <div class="modal-dialog">
