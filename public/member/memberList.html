@@ -20,11 +20,11 @@
 		}
 		
 		a:link {
-			color:white;
+			color:black;
 			text-decoration: none;
 		}
 		a:visited {
-			color:white;
+			color:black;
 			text-decoration: none;
 		}
 		a:hover {
@@ -111,10 +111,10 @@
 	    <div class="col-4">
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
-					<a class="nav-link" href="#">코드그룹관리</a>
+					<a class="nav-link" href="#" style="color: white">코드그룹관리</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">코드관리</a>
+					<a class="nav-link" href="#" style="color: white">코드관리</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link active" aria-current="page" href="#">회원관리</a>
@@ -137,27 +137,26 @@
 							 </select>
 						</div>
 						<div class="col col-lg-2">
-							<select class="form-select" id="inputGroupSelect2">
-								<option selected>지원분야</option>
-								<option value="1">백엔드</option>
-								<option value="2">프론트엔드</option>
-								<option value="3">모바일</option>
-								<option value="4">정보보안</option>
-								<option value="5">시스템엔지니어</option>
-							 </select>
+							<select class="form-select" id="inputGroupSelect3">
+								<option selected>날짜선택</option>
+								<option value="1">가입일</option>
+								<option value="2">생년월일</option>
+							</select>
 						</div>
 						<div class="col col-lg-2">
-							<select class="form-select" id="inputGroupSelect3">
-								<option selected>가입일</option>
-								<option value="1">2022.07.03</option>
-								<option value="2">2022.07.04</option>
-								<option value="3">2022.07.05</option>
-								<option value="4">2022.07.06</option>
+							<input type="date" class="form-control">
+						</div>
+						<div class="col col-lg-2">
+							<select class="form-select" id="inputGroupSelect2">
+								<option selected>선택</option>
+								<option value="1">이름</option>
+								<option value="2">지원분야</option>
+								<option value="3">이메일</option>
 							 </select>
 						</div>
 						<div class="col-md-auto">
 							<form class="d-flex" role="search">
-								<input class="form-control" type="search" placeholder="이름검색" aria-label="Search">&nbsp;&nbsp;
+								<input class="form-control" type="search" placeholder="검색어 입력" aria-label="Search">&nbsp;&nbsp;
 								<button class="btn btn-outline-light" type="submit">Search</button>
 							</form>
 						</div>
@@ -165,15 +164,16 @@
 				</div>
 			</div>
 		</div>
-		<table class="table table-dark table-striped table-hover">
+		<table class="table table-light table-striped table-hover">
 			<thead>
 				<tr>
 					<th scope="col"><input type="checkbox" name="check" class="allcheck"></th>
 					<th scope="col">번호</th>
 					<th scope="col">구분</th>
-					<th scope="col">지원분야</th>
+					<th scope="col">이름</th>
+					<th scope="col">생년월일</th>
 					<th scope="col">이메일</th>
-					<th scope="col">작성자</th>
+					<th scope="col">지원분야</th>
 					<th scope="col">가입일</th>
 				</tr>
 			</thead>
@@ -195,64 +195,71 @@
 					<td><a href="memberView.html"><input type="checkbox" name="check"></a></td>
 					<td scope="row"><a href="memberView.html">7</a></td>
 					<td><a href="memberView.html">경력</a></td>
-					<td><a href="memberView.html">정보보안</a></td>
-					<td><a href="memberView.html">ysw@gmail.com</a></td>
 					<td><a href="memberView.html">임시완</a></td>
-					<td><a href="memberView.html">2022.07.05</a></td>
+					<td><a href="memberView.html">1988-12-01</a></td>
+					<td><a href="memberView.html">ysw@gmail.com</a></td>
+					<td><a href="memberView.html">정보보안</a></td>
+					<td><a href="memberView.html">2022-07-05</a></td>
 				</tr>
 				<tr>
 					<td><input type="checkbox" name="check"></td>
 					<td scope="row">6</td>
 					<td>신입</td>
-					<td>백엔드</td>
-					<td>kge@gmail.com</td>
 					<td>김가을</td>
-					<td>2022.07.05</td>
+					<td>1990-05-30</td>
+					<td>kge@gmail.com</td>
+					<td>백엔드</td>
+					<td>2022-07-05</td>
 				</tr>
 				<tr>
 					<td><input type="checkbox" name="check"></td>
 					<td scope="row">5</td>
 					<td>신입</td>
-					<td>백엔드</td>
-					<td>uyl@gmail.com</td>
 					<td>유예린</td>
-					<td>2022.07.05</td>
+					<td>1993-08-03</td>
+					<td>uyl@gmail.com</td>
+					<td>백엔드</td>
+					<td>2022-07-05</td>
 				</tr>
 				<tr>
 					<td><input type="checkbox" name="check"></td>
 					<td scope="row">4</td>
 					<td>신입</td>
-					<td>모바일</td>
-					<td>kdw@gmail.com</td>
 					<td>김동욱</td>
-					<td>2022.07.04</td>
+					<td>1999-01-18</td>
+					<td>kdw@gmail.com</td>
+					<td>모바일</td>
+					<td>2022-07-04</td>
 				</tr>
 				<tr>
 					<td><input type="checkbox" name="check"></td>
 					<td scope="row">3</td>
 					<td>경력</td>
-					<td>시스템엔지니어</td>
-					<td>jhy@gmail.com</td>
 					<td>장하연</td>
-					<td>2022.07.04</td>
+					<td>1995-11-15</td>
+					<td>jhy@gmail.com</td>
+					<td>시스템엔지니어</td>
+					<td>2022-07-04</td>
 				</tr>
 				<tr>
 					<td><input type="checkbox" name="check"></td>
 					<td scope="row">2</td>
 					<td>신입</td>
-					<td>백엔드</td>
-					<td>hdy@gmail.com</td>
 					<td>한동윤</td>
-					<td>2022.07.04</td>
+					<td>1998-02-20</td>
+					<td>hdy@gmail.com</td>
+					<td>백엔드</td>
+					<td>2022-07-04</td>
 				</tr>
 				<tr>
 					<td><input type="checkbox" name="check"></td>
 					<td scope="row">1</td>
 					<td>경력</td>
-					<td>프론트엔드</td>
-					<td>ljh@gmail.com</td>
 					<td>이재현</td>
-					<td>2022.07.03</td>
+					<td>1997-09-13</td>
+					<td>ljh@gmail.com</td>
+					<td>프론트엔드</td>
+					<td>2022-07-03</td>
 				</tr>
 			</tbody>
 		</table>
@@ -266,8 +273,8 @@
 					<li class="page-item active" aria-current="page">
 				 		<a class="page-link" href="#">1</a>
 					</li>
-					<li class="page-item"><a class="page-link" href="#">2</a></li>
-					<li class="page-item"><a class="page-link" href="#">3</a></li>
+					<li class="page-item"><a class="page-link" href="#" style="color: black">2</a></li>
+					<li class="page-item"><a class="page-link" href="#" style="color: black">3</a></li>
 					<li class="page-item">
 						<a class="page-link" href="#"> > </a>
 					</li>
@@ -289,7 +296,7 @@
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-			        <button type="button" class="btn btn-primary">확인</button>
+			        <button type="button" class="btn btn-primary" onclick="deleteValue();">확인</button>
 			      </div>
 			    </div>
 			  </div>
@@ -301,29 +308,7 @@
 	</div>
 	
 <script>
-	$(function(){
-	    $("[type=checkbox][name=check]").on("change", function(){ //0
-	        var check = $(this).prop("checked"); //1
-	        //전체 체크
-	        if($(this).hasClass("allcheck")){ //2
-	            $("[type=checkbox][name=check]").prop("checked", check);
-	
-	        //단일 체크
-	        }else{ //3
-	            var all = $("[type=checkbox][name=check].allcheck");
-	            var allcheck = all.prop("checked")
-	            if(check != allcheck){ //3-1
-	                var len = $("[type=checkbox][name=check]").not(".allcheck").length; //3-2
-	                var ckLen = $("[type=checkbox][name=check]:checked").not(".allcheck").length; //3-2
-	                if(len === ckLen){ //3-3
-	                    all.prop("checked", true);
-	                }else{
-	                    all.prop("checked", false);
-	                }
-	            }
-	        }
-	    });
-	});
+?	
 /* 		
 		var chkObj = document.getElemnetsByName("RowCheck");
 		var rowCnt = chkObj.length;
@@ -345,7 +330,7 @@
 	});
  */		
 	    	
-/* 	
+
 	function deleteValue() {
 		var url = "delete";
 		var valueArr = new Array();
@@ -379,7 +364,7 @@
 			})
 		}		
 	}
- */	
+
 </script>
 <!-- end -->
 
