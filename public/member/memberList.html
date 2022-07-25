@@ -363,7 +363,7 @@
 	});
 	
 	button = document.querySelector('button');
-	input = document.getElementById('value')
+	input = document.getElementById('search_btn')
 
 	// 클릭,엔터키 이벤트 
 	input.focus()
@@ -375,9 +375,9 @@
 	button.addEventListener('click',Filter);
 
 	function Filter(){
-	    var value , item , name
+	    var search_btn , item , name
 	    
-	    value = document.getElementById('value').value.toUpperCase();
+	    search_btn = document.getElementById('search_btn').value.toUpperCase();
 	    item = document.getElementsByClassName('one_quarter')
 	    
 	  //indexOf()를 활용한 검색기능 구현
