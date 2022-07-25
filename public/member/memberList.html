@@ -49,6 +49,7 @@
 			background-color: #353535;
 			font-family: 'OTWelcomeBA';
 			background-image : url("../image/movie.png");
+			background-size : cover;
 		}
 		
 		input {
@@ -66,6 +67,33 @@
 		.filter-group {
 			margin: 5px 0 0 0;
 		}
+		
+		#urls.py
+    		path('search_form/', views.search_form, name='search_form'),
+
+		#views.py
+		def search_form(request):
+		    if request.method=='POST':
+		        print('---- search_form request ----')
+		        search_type = request.POST['type']
+		        search_keyword = request.POST['keyword']
+		
+		        if search_type == 'title':
+		            find_forms = Bbs.objects.filter(title__icontains=search_keyword)
+		        elif search_type == 'content':
+		            find_forms = Bbs.objects.filter(content__icontains=search_keyword)
+		        elif search_type == 'writer':
+		            find_forms = Bbs.objects.filter(writer__startswitch=search_keyword)
+		
+		        form_list = []
+		        for form in find_forms:
+		            form_list.append({
+		                'id' : form.id ,    'title' : form.title ,
+		                'content' : form.content ,  'regdate': form.regdate,
+		                'viewcnt' : form.viewcnt,   'writer' : form.writer
+		            })
+
+        return JsonResponse(form_list, safe=False)
 
 /* 		
 		.form-control, .container {
@@ -87,7 +115,7 @@
 			  	</button>
 				<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 					<div class="offcanvas-header">
-						<h4 class="offcanvas-title" id="offcanvasNavbarLabel">이메일로 로그인</h4>
+						<h4 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="../image/netflixsmall.png" style="width: 50px; height: 30px">이메일로 로그인</h4>
 						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					</div>
 					<div class="offcanvas-body">
@@ -156,7 +184,7 @@
 						</div>
 						<div class="col-md-auto">
 							<form class="d-flex" role="search">
-								<input class="form-control" type="search" placeholder="검색어 입력" aria-label="Search">&nbsp;&nbsp;
+								<input class="form-control" type="search" id="search_btn" placeholder="검색어 입력" aria-label="Search">&nbsp;&nbsp;
 								<button class="btn btn-outline-light" type="submit">Search</button>
 							</form>
 						</div>
@@ -301,15 +329,70 @@
 			    </div>
 			  </div>
 			</div>
-			<a href="memberRegForm.html"></a>
-			<button type="button" class="btn btn-dark" style="float: right;">
-			<i class="fa-solid fa-pen-to-square"></i> 지원서 작성</button>
+			<a href="memberRegForm.html">
+				<button type="button" class="btn btn-dark" style="float: right;">
+				<i class="fa-solid fa-pen-to-square"></i> 지원서 작성</button>
+			</a>
 		</div>
 	</div>
 	
 <script>
-?	
-/* 		
+
+	$(function(){
+	    $("[type=checkbox][name=check]").on("change", function(){ //0
+	        var check = $(this).prop("checked"); //1
+	        //전체 체크
+	        if($(this).hasClass("allcheck")){ //2
+	            $("[type=checkbox][name=check]").prop("checked", check);
+	
+	        //단일 체크
+	        }else{ //3
+	            var all = $("[type=checkbox][name=check].allcheck");
+	            var allcheck = all.prop("checked")
+	            if(check != allcheck){ //3-1
+	                var len = $("[type=checkbox][name=check]").not(".allcheck").length; //3-2
+	                var ckLen = $("[type=checkbox][name=check]:checked").not(".allcheck").length; //3-2
+	                if(len === ckLen){ //3-3
+	                    all.prop("checked", true);
+	                }else{
+	                    all.prop("checked", false);
+	                }
+	            }
+	        }
+	    });
+	});
+	
+	button = document.querySelector('button');
+	input = document.getElementById('value')
+
+	// 클릭,엔터키 이벤트 
+	input.focus()
+	input.addEventListener('keydown',function(e){
+	    if(e.key === "Enter"){
+	      Filter();
+	    }
+	})
+	button.addEventListener('click',Filter);
+
+	function Filter(){
+	    var value , item , name
+	    
+	    value = document.getElementById('value').value.toUpperCase();
+	    item = document.getElementsByClassName('one_quarter')
+	    
+	  //indexOf()를 활용한 검색기능 구현
+	  for(i=0;i<item.length;i++){
+	      name = item[i].getElementsByClassName("name");
+	      if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+	        item[i].style.display = "inline-block";
+	      }else{
+	        item[i].style.display = "none";
+	      }
+	    }
+	       
+	    
+	}
+/* 
 		var chkObj = document.getElemnetsByName("RowCheck");
 		var rowCnt = chkObj.length;
 		
@@ -328,9 +411,8 @@
 			}
 		});
 	});
- */		
-	    	
-
+ */	    	
+/* 
 	function deleteValue() {
 		var url = "delete";
 		var valueArr = new Array();
@@ -364,7 +446,7 @@
 			})
 		}		
 	}
-
+ */
 </script>
 <!-- end -->
 
