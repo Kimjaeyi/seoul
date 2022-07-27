@@ -22,7 +22,7 @@
 		background-color : plum;
 	}
 	
-	h3 {
+	h3, h6 {
 		color : white;
 		font-weight : bold;
 	}
@@ -35,21 +35,29 @@
 		color: white;
 	}
 	
-	.search {
+	#gowmp {
+		color: purple;
+		border-radius : 6px;
+		border: 1px solid purple;
+		width : 70px;
+		height: 30px;
+	}
+	
+	.search .input {
 		display: inline-block;
 		height: 60px;
 		font-size: 18px;
 		width: 668px;
 		background-color: white;
-		background-image: url(../image/img-search.svg);
+		background-image: url(seoul/public/image/img-search.svg);
 		background-repeat: no-repeat;
 		background-position: 40px center;
 		border-radius: 4px;
 		border: 1px solid white;
 	}
 	
-	.aaa {
-		margin : 5% 20%;
+	aaa {
+		margin: 5% 20%;
 	}
 	
 </style>
@@ -58,19 +66,29 @@
 <!-- start -->
 	<div class="header">
 		<div class="abc">
-			<div class="row">
-				<div class="col-1" style="margin: 28px 0;">
-					<i class="fa-solid fa-bars fa-2x"></i>
+			<div class="row justify-content-between">
+				<div class="col-4">
+					<div class="col-2" style="margin: 28px 0 0 0;">
+						<i class="fa-solid fa-bars fa-2x"></i>
+					</div>
+					<div class="col-2" style="margin: 20px 0 0 0;">
+						<h1>coocha</h1>
+					</div>
 				</div>
-				<div class="col-1" style="margin: 20px 0;">
-					<h1>coocha</h1>
+				<div class="col-4" style="margin: 28px 0; float: right;">
+					<h6>로그인</h6><h6>회원가입</h6>
 				</div>
 			</div>
 			<h3>비오는 여름날엔 뭘 신는게 좋지?</h3>
+			<br>
 			<div class="search">
 				 <input type="search" class="input search-keyword">
 			</div>
 		</div>
+	</div>
+	<div class="aaa">
+		<h4><b>실시간 핫딜 TOP 5</b></h4>
+		<button type="button" id="gowmp">위메프</button>
 	</div>
 
 <!-- end -->
