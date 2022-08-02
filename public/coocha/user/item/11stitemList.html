@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Bootstrap demo</title>
+	<title>11stpage</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
@@ -14,6 +14,19 @@
 	h1 {
 		font-family: 'GilbeotRainbow';
 		color : white;
+	}
+	
+	a:link {
+			color:black;
+			text-decoration: none;
+	}
+	a:visited {
+			color:black;
+			text-decoration: none;
+	}
+	a:hover {
+			color:blueviolet;
+			text-decoration: none;
 	}
 	
 	.header {
@@ -35,7 +48,7 @@
 		height: 100%;
 	}
 	
-	#shop p {
+	#shop p, #under p {
 		font-size : 13px;
 	}
 	
@@ -58,11 +71,10 @@
 	}
 	
 	#gowmp {
-		border: 1px solid #6900EF;
+		border: 1px solid #4A4A4A;
 		border-radius : 8px;
-		color : #6900EF; 
+		color : #4A4A4A; 
 		background-color: white;
-		font-weight : bold;
 		width: 75px; 
 		height: 40px;
 		font-size: 15px;
@@ -80,10 +92,11 @@
 	}
 	
 	#go11 {
-		border: 1px solid #4A4A4A;
+		border: 1px solid #6900EF;
 		border-radius : 8px;
-		color : #4A4A4A; 
+		color : #6900EF; 
 		background-color: white;
+		font-weight : bold;
 		width: 75px; 
 		height: 40px;
 		margin: 0 0 0 10px;
@@ -157,11 +170,18 @@
 		white-space : nowrap;
 		line-height : 160%;
 	}
-/*  	
-	#hot {
-		margin : 0 3% 0 0;
+	
+	.footer {
+		font-size : 13px;
+		margin : 0 0 5% 0;
 	}
- */
+	
+	.foot p {
+		margin: 0 5% 0 0;
+		display : inline;
+		color : #6C6C6C;
+	}
+	
 </style>
 <body>
 
@@ -169,17 +189,17 @@
 	<div class="header">
 		<div class="abc">
 			<div class="row justify-content-between">
-				<div class="col-4" style="margin: 30px 0 0 0">
+				<div class="col" style="margin: 30px 0 0 0">
 					<i class="fa-solid fa-bars fa-2x" style="display: inline"></i>
 					<h1 style="display: inline; margin: 0 0 0 20px" >coocha</h1>
 				</div>
-				<div class="col-4" style="float: right; margin: 40px 0 0 0">
+				<div class="col-2" style="float: right; margin: 40px 0 0 0">
 					<h6 style="display: inline; margin: 0 50px 0 0">로그인</h6>
 					<h6 style="display: inline">회원가입</h6>
 				</div>
 			</div>
 			<br><br>
-			<h3>비오는 여름날엔 뭘 신는게 좋지?</h3>
+			<h3>장마철엔 뭘 신어야 할까?</h3>
 			<br>
 			<div class="search">
 				 <input type="search" class="input search-keyword">
@@ -189,44 +209,45 @@
 	<div class="aaa">
 		<h5><b>실시간 핫딜 TOP 5</b></h5>
 		<br>
-		<button type="button" id="gowmp">위메프</button>
-		<button type="button" id="gotm">티몬</button>
-		<button type="button" id="go11">11번가</button>
+		<a href="wmpitemList.html"><button type="button" id="gowmp">위메프</button></a>
+		<a href="tmonitemList.html"><button type="button" id="gotm">티몬</button></a>
+		<a href="11stitemList.html"><button type="button" id="go11">11번가</button></a>
 	</div>
 	<div class="bbb">
 		<div class="row justify-content-center">
 			<div class="col-2" id="item">
-				<img src="../image/위메프1.png" style="margin: 5px 0">
-				<p id="itemtitle">22만개 판매돌파! 1+3 리엔 물들임<br>새치커버 샴푸 450ml + 트릿 150ml + 샴푸 80 + 트릿 80 외</p>
+				<img src="../image/11번가1.jpg" style="margin: 5px 0">
+				<p id="itemtitle">맥심 모카/화이트골드 360T 외 모음전<br>&nbsp;</p>
 				<p id="itemsale">10%</p>
-				<p id="itemprice">37,700</p>
+				<p id="itemprice">40,900</p>
 				<p id="itemwon">원</p>
 			</div>
 			<div class="col-2" id="item">
-				<img src="../image/위메프2.jpg" style="margin: 5px 0">
-				<p id="itemtitle">아임웰 닭가슴살 볶음밥 1+1+1팩 외<br>아임닭/아임웰 BEST + 오늘 54%쿠폰</p>
-				<p id="itemprice">5,980</p>
+				<img src="../image/11번가2.jpg" style="margin: 5px 0">
+				<p id="itemtitle">[더주] 추억속 그맛! 말랑 숏다리<br>300g 외 대용량 주전부리 모음</p>
+				<p id="itemsale">28%</p>
+				<p id="itemprice">10,700</p>
 				<p id="itemwon">원</p>
 			</div>
 			<div class="col-2" id="item">
-				<img src="../image/위메프3.png" style="margin: 5px 0">
-				<p id="itemtitle">다우니 실내건조 섬유유연제 1L 3개<br>+200ml, 덜마른 빨래 세균 번식 억제</p>
-				<p id="itemsale">10%</p>
-				<p id="itemprice">16,740</p>
+				<img src="../image/11번가3.jpg" style="margin: 5px 0">
+				<p id="itemtitle">[장마대비] 생활광장 여름 자외선차단<br>접이식 장우산 3단우산 양 우산 모음전</p>
+				<p id="itemsale">19%</p>
+				<p id="itemprice">6,930</p>
 				<p id="itemwon">원</p>
 			</div>
 			<div class="col-2" id="item">
-				<img src="../image/위메프4.png" style="margin: 5px 0">
-				<p id="itemtitle">Jeep 1941 빅로고 반팔티셔츠 외<br>22S/S 신상 반팔티셔츠 모음 할인전</p>
+				<img src="../image/11번가4.jpg" style="margin: 5px 0">
+				<p id="itemtitle">초복준비 올반 삼계탕 정 / 정갈한<br>소고기 미역국 / 시원한 파 육개장</p>
 				<p id="itemsale">20%</p>
-				<p id="itemprice">11,920</p>
-				<p id="itemwon">원~</p>
+				<p id="itemprice">21,520</p>
+				<p id="itemwon">원</p>
 			</div>
 			<div class="col-2" id="item">
-				<img src="../image/위메프5.png" style="margin: 5px 0">
-				<p style="font-size: 11.5px">농심오뚜기 컵라면 6개입 84종 진라면<br>신라면 진짬뽕 육개장 새우탕 사발면 컵누들 참깨라면</p>
-				<p style="font-size: 17px; color: #DE0000; font-weight: bold; margin: 0 30px 0 0; display: inline">위메프가</p>
-				<p id="itemprice">4,900</p>
+				<img src="../image/11번가5.png" style="margin: 5px 0">
+				<p id="itemtitle">[본사운영] 지도표 성경김 녹차<br>식탁김 4g 16봉+16봉 (총 32봉)</p>
+				<p id="itemsale">42%</p>
+				<p id="itemprice">8,690</p>
 				<p id="itemwon">원</p>
 			</div>
 		</div>
@@ -369,7 +390,47 @@
 		</div>
 	</div>
 	<div class="container">
-	
+		<div class="row justify-content-center">
+			<div class="col" id="under">
+				<p>앱 다운로드</p>
+			</div>
+			<div class="col" id="under">
+				<p>회사소개</p>
+			</div>
+			<div class="col" id="under">
+				<p>고객센터</p>
+			</div>
+			<div class="col" id="under">
+				<p>서비스이용약관</p>
+			</div>
+			<div class="col" id="under">
+				<p><b>개인정보처리방침</b></p>
+			</div>
+			<div class="col" id="under">
+				<p>마케팅센터</p>
+			</div>
+			<div class="col" id="under">
+				<p>입점 및 광고 안내</p>
+			</div>
+		</div>
+		<br>
+		<p style="color: #6C6C6C; font-size: 13px"><b>쿠차는 상품에 직접 관여하지 않으며 상품 주문, 배송 및 환불의 의무와 책임은 각 판매업체에 있습니다.</b></p>
+		<br>
+		<div class="footer">
+			<div class="foot">
+				<p>(주) jj컴퍼니</p>
+				<p>대표 김재이</p>
+				<p>사업자등록번호 123-22-07310</p>
+			</div>
+			<br>
+			<div class="foot">
+				<p>서울시 서초구 서초대로 77길 55 에이프로스퀘어 3층</p>
+				<p>고객센터 cs_jy@coocha.com</p>
+				<p>입점 · 광고 business@coocha.com</p>
+			</div>
+			<br>
+			<p>ⓒ 2022. SearchFy Inc. All Rights Reserved.</p>
+		</div>
 	</div>
 
 <!-- end -->
