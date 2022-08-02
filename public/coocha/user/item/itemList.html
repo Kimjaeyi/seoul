@@ -22,9 +22,31 @@
 		background-color : plum;
 	}
 	
+	.shoppingmall {
+		margin : 5% 0;
+		width: 100%;
+		height : 330px;
+		background-color : #F5F5F5;
+	}
+	
+	.container {
+		margin : 0 15%;
+		width : 100%;
+		height: 100%;
+	}
+	
+	#shop p {
+		font-size : 13px;
+	}
+	
+	
 	h3, h6 {
 		color : white;
 		font-weight : bold;
+	}
+	
+	h5 {
+		color : #666666;
 	}
 	
 	.abc {
@@ -46,7 +68,18 @@
 		font-size: 15px;
 	}
 	
-	#gotm, #go11 {
+	#gotm {
+		border: 1px solid #4A4A4A;
+		border-radius : 8px;
+		color : #4A4A4A; 
+		background-color: white;
+		width: 65px; 
+		height: 40px;
+		margin: 0 0 0 10px;
+		font-size: 15px;
+	}
+	
+	#go11 {
 		border: 1px solid #4A4A4A;
 		border-radius : 8px;
 		color : #4A4A4A; 
@@ -57,11 +90,24 @@
 		font-size: 15px;
 	}
 	
-	.search .input {
+	.search {
 		display: inline-block;
 		height: 60px;
 		font-size: 18px;
 		width: 668px;
+		background-color: white;
+		background-image: url('..image/img-search.png');
+		background-repeat: no-repeat;
+		background-position: 40px right;
+		border-radius: 4px;
+		border: 1px solid white;
+	}
+	
+	.input {
+		display: inline-block;
+		height: 58px;
+		font-size: 18px;
+		width: 610px;
 		background-color: white;
 		background-image: url('..image/img-search.png');
 		background-repeat: no-repeat;
@@ -79,7 +125,37 @@
 	}
 	
 	#item {
-		margin : 0 1%;
+		margin : 0 22px;
+	}
+	
+	#itemtitle {
+		font-size: 12px;
+	}
+	
+	#itemsale {
+		font-size: 17px; 
+		color: #6900EF; 
+		font-weight: bold; 
+		margin: 0 30px 0 0; 
+		display: inline;
+	}
+	
+	#itemprice {
+		font-size: 17px; 
+		font-weight: bold; 
+		display: inline;
+	}
+	
+	#itemwon {
+		font-size: 14px; 
+		display: inline;
+	}
+	
+	p {
+		overflow : hidden;
+		text-overflow : ellipsis;
+		white-space : nowrap;
+		line-height : 160%;
 	}
 /*  	
 	#hot {
@@ -121,29 +197,37 @@
 		<div class="row justify-content-center">
 			<div class="col-2" id="item">
 				<img src="../image/위메프1.png" style="margin: 5px 0">
-				<p style="font-size: 12px">22만개 판매돌파! 1+3 <br>리엔 물들임 새치커버 샴푸 450ml</p>
-				<p style="font-size: 17px; color: #6900EF; font-weight: bold; margin: 0 30px 0 0; display: inline">23%</p>
-				<p style="font-size: 17px; font-weight: bold; display: inline">27,700</p>
-				<p style="font-size: 14px; display: inline">원</p>
+				<p id="itemtitle">22만개 판매돌파! 1+3 리엔 물들임<br>새치커버 샴푸 450ml + 트릿 150ml + 샴푸 80 + 트릿 80 외</p>
+				<p id="itemsale">10%</p>
+				<p id="itemprice">37,700</p>
+				<p id="itemwon">원</p>
 			</div>
 			<div class="col-2" id="item">
 				<img src="../image/위메프2.jpg" style="margin: 5px 0">
-				<p style="font-size: 12px">아임웰 닭가슴살 볶음밥 1+1+1팩 외<br>아임닭/아임웰 BEST+오늘 54%쿠폰</p>
-				<p style="font-size: 17px; color: #6900EF; font-weight: bold; margin: 0 30px 0 0; display: inline">68%</p>
-				<p style="font-size: 17px; font-weight: bold; display: inline">6,750</p>
-				<p style="font-size: 14px; display: inline">원</p>
+				<p id="itemtitle">아임웰 닭가슴살 볶음밥 1+1+1팩 외<br>아임닭/아임웰 BEST + 오늘 54%쿠폰</p>
+				<p id="itemprice">5,980</p>
+				<p id="itemwon">원</p>
 			</div>
 			<div class="col-2" id="item">
-				<img src="../image/위메프3.png">
-				<p style="font-size: 12px">다우니 실내건조 섬유유연제 1L 3개<br>+200ml, 덜마른 빨래 세균 번식 억제</p>
+				<img src="../image/위메프3.png" style="margin: 5px 0">
+				<p id="itemtitle">다우니 실내건조 섬유유연제 1L 3개<br>+200ml, 덜마른 빨래 세균 번식 억제</p>
+				<p id="itemsale">10%</p>
+				<p id="itemprice">16,740</p>
+				<p id="itemwon">원</p>
 			</div>
 			<div class="col-2" id="item">
-				<img src="../image/위메프4.png">
-				<p style="font-size: 12px">Jeep 1941 빅로고 반팔티셔츠 외<br>22S/S 신상 반팔티셔츠 모음 할인전</p>
+				<img src="../image/위메프4.png" style="margin: 5px 0">
+				<p id="itemtitle">Jeep 1941 빅로고 반팔티셔츠 외<br>22S/S 신상 반팔티셔츠 모음 할인전</p>
+				<p id="itemsale">20%</p>
+				<p id="itemprice">11,920</p>
+				<p id="itemwon">원~</p>
 			</div>
 			<div class="col-2" id="item">
-				<img src="../image/위메프5.png">
-				<p style="font-size: 11.5px">농심오뚜기 컵라면 6개입 84종 진라면<br>신라면 진짬뽕 육개장 새우탕 사발면</p>
+				<img src="../image/위메프5.png" style="margin: 5px 0">
+				<p style="font-size: 11.5px">농심오뚜기 컵라면 6개입 84종 진라면<br>신라면 진짬뽕 육개장 새우탕 사발면 컵누들 참깨라면</p>
+				<p style="font-size: 17px; color: #DE0000; font-weight: bold; margin: 0 30px 0 0; display: inline">위메프가</p>
+				<p id="itemprice">4,900</p>
+				<p id="itemwon">원</p>
 			</div>
 		</div>
 		<br><br><br>
@@ -151,58 +235,141 @@
 		<br>
 		<div class="row justify-content-center">
 			<div class="col-auto" id="hot">
-				<img src="../image/베스트1.jpg">
-				<p style="font-size: 13px">[복날몸보신] [배스킨라빈스x굽네치킨]<br>최대 23%할인 초복 프로모션</p>
+				<img src="../image/베스트1.jpg" style="margin: 5px 0">
+				<p style="font-size: 13px">[복날몸보신] [배스킨라빈스x굽네치킨] 최대 23%<br>할인 초복 프로모션</p>
+				<p style="font-size: 18px; color: #6900EF; font-weight: bold; margin: 0 30px 0 0; display: inline">23%</p>
+				<p style="font-size: 18px; font-weight: bold; display: inline">27,700</p>
+				<p style="font-size: 15px; display: inline">원</p>
 			</div>
 			<div class="col-auto" id="hot">
-				<img src="../image/베스트2.jpg">
+				<img src="../image/베스트2.jpg" style="margin: 5px 0">
 				<p style="font-size: 13px">개당89원 초특가 KF94 ALL국산 소형/대형<br>새부리형/입체형컬러마스크/에어데이즈/이비에</p>
+				<p style="font-size: 18px; color: #6900EF; font-weight: bold; margin: 0 30px 0 0; display: inline">68%</p>
+				<p style="font-size: 18px; font-weight: bold; display: inline">6,750</p>
+				<p style="font-size: 15px; display: inline">원</p>
 			</div>
 			<div class="col-auto" id="hot">
-				<img src="../image/베스트3.jpg">
-				<p style="font-size: 13px">[롯데리아] 1만원권 11% 할인</p>
+				<img src="../image/베스트3.jpg" style="margin: 5px 0">
+				<p style="font-size: 13px">[롯데리아] 1만원권 11% 할인<br>&nbsp;</p>
+				<p style="font-size: 18px; color: #6900EF; font-weight: bold; margin: 0 30px 0 0; display: inline">11%</p>
+				<p style="font-size: 18px; font-weight: bold; display: inline">8,900</p>
+				<p style="font-size: 15px; display: inline">원</p>
 			</div>
 			<div class="col-auto" id="hot">
-				<img src="../image/베스트4.jpg">
+				<img src="../image/베스트4.jpg" style="margin: 5px 0">
 				<p style="font-size: 13px">[뉴발란스] 선착순쿠폰 뉴발란스/아디다스/나이키 외<br>스포츠 브랜드 의류/슈즈 총모음전</p>
+				<p style="font-size: 18px; color: #6900EF; font-weight: bold; margin: 0 30px 0 0; display: inline">80%</p>
+				<p style="font-size: 18px; font-weight: bold; display: inline">7,900</p>
+				<p style="font-size: 15px; display: inline">원</p>
 			</div>
 		</div>
+		<br><br>
 		<div class="row justify-content-center">
 			<div class="col-auto" id="hot">
-				<img src="../image/베스트5.jpg">
+				<img src="../image/베스트5.jpg" style="margin: 5px 0">
 				<p style="font-size: 13px">[20%쿠폰] 양말폭탄 아동/성인 여름양말<br>메시 페이크삭스 스니커즈 선물세트</p>
+				<p style="font-size: 18px; font-weight: bold; display: inline">4,900</p>
+				<p style="font-size: 15px; display: inline">원</p>
 			</div>
 			<div class="col-auto" id="hot">
-				<img src="../image/베스트6.jpg">
+				<img src="../image/베스트6.jpg" style="margin: 5px 0">
 				<p style="font-size: 13px">[타미힐피거] 마지막 특!가! 타미힐피거<br>반팔피게티 최.저.가.세.일</p>
+				<p style="font-size: 18px; color: #6900EF; font-weight: bold; margin: 0 30px 0 0; display: inline">7%</p>
+				<p style="font-size: 18px; font-weight: bold; display: inline">33,390</p>
+				<p style="font-size: 15px; display: inline">원</p>
 			</div>
 			<div class="col-auto" id="hot">
-				<img src="../image/베스트7.jpg">
+				<img src="../image/베스트7.jpg" style="margin: 5px 0">
 				<p style="font-size: 13px">★최대40%쿠폰★ 온더바디 발을씻자 풋샴푸<br>385ml X 3개 외 샴푸, 바디워시</p>
+				<p style="font-size: 18px; color: #6900EF; font-weight: bold; margin: 0 30px 0 0; display: inline">10%</p>
+				<p style="font-size: 18px; font-weight: bold; display: inline">19,710</p>
+				<p style="font-size: 15px; display: inline">원</p>
 			</div>
 			<div class="col-auto" id="hot">
-				<img src="../image/베스트8.jpg">
+				<img src="../image/베스트8.jpg" style="margin: 5px 0">
 				<p style="font-size: 13px">[크록스공식점]30%쿠폰! 성인/키즈 클로그 외<br>여름슈즈 단독가!</p>
+				<p style="font-size: 18px; font-weight: bold; display: inline">19,900</p>
+				<p style="font-size: 15px; display: inline">원</p>
 			</div>
 		</div>
+		<br><br>
 		<div class="row justify-content-center">
 			<div class="col-auto" id="hot">
-				<img src="../image/베스트9.jpg">
-				<p style="font-size: 13px">[기프티콘] 파리바게뜨 우유팥빙수+꽃빙수(딸기망고)</p>
+				<img src="../image/베스트9.jpg" style="margin: 5px 0">
+				<p style="font-size: 13px">[기프티콘] 파리바게뜨 우유팥빙수+꽃빙수(딸기망고)<br>&nbsp;</p>
+				<p style="font-size: 18px; color: #6900EF; font-weight: bold; margin: 0 30px 0 0; display: inline">20%</p>
+				<p style="font-size: 18px; font-weight: bold; display: inline">15,040</p>
+				<p style="font-size: 15px; display: inline">원</p>
 			</div>
 			<div class="col-auto" id="hot">
-				<img src="../image/베스트10.jpg">
+				<img src="../image/베스트10.jpg" style="margin: 5px 0">
 				<p style="font-size: 13px">티젠 김태리 콤부차 30스틱 / 10스틱<br>파인애플 / 유자 / 레몬 / 피치 / 베리</p>
+				<p style="font-size: 18px; font-weight: bold; display: inline">13,500</p>
+				<p style="font-size: 15px; display: inline">원</p>
 			</div>
 			<div class="col-auto" id="hot">
-				<img src="../image/베스트11.jpg">
+				<img src="../image/베스트11.jpg" style="margin: 5px 0">
 				<p style="font-size: 13px">롯데 꼬깔콘 67gx8개 외 치토스,몽쉘,칙촉,<br>가나,ABC,드림카카오,자일리톨모음</p>
+				<p style="font-size: 18px; color: #6900EF; font-weight: bold; margin: 0 30px 0 0; display: inline">8%</p>
+				<p style="font-size: 18px; font-weight: bold; display: inline">11,780</p>
+				<p style="font-size: 15px; display: inline">원</p>
 			</div>
 			<div class="col-auto" id="hot">
-				<img src="../image/베스트12.jpg">
+				<img src="../image/베스트12.jpg" style="margin: 5px 0">
 				<p style="font-size: 13px">10%쿠폰 코렐 파이렉스 스누피 계량컵<br>밀폐용기/저장용기/믹싱볼/텀블러 모음전</p>
+				<p style="font-size: 18px; color: #6900EF; font-weight: bold; margin: 0 30px 0 0; display: inline">33%</p>
+				<p style="font-size: 18px; font-weight: bold; display: inline">7,900</p>
+				<p style="font-size: 15px; display: inline">원</p>
 			</div>
 		</div>
+	</div>
+	<div class="shoppingmall">
+		<div class="container">
+			<br><br>
+			<h5><b>주요 쇼핑몰</b></h5>
+			<br><br>
+			<div class="row">
+				<div class="col" id="shop">
+					<p>11번가</p>
+					<p>G마켓</p>
+					<p>옥션</p>
+				</div>
+				<div class="col" id="shop">
+					<p>인터파크</p>
+					<p>CJ온스타일</p>
+					<p>GS SHOP</p>
+				</div>
+				<div class="col" id="shop">
+					<p>신세계몰</p>
+					<p>이마트몰</p>
+				</div>
+				<div class="col" id="shop">
+					<p>위메프</p>
+					<p>티몬</p>
+					<p>쿠팡</p>
+				</div>
+				<div class="col" id="shop">
+					<p>하프클럽</p>
+					<p>보리보리</p>
+					<p>머스트잇</p>
+					<p>W컨셉</p>
+				</div>
+				<div class="col" id="shop">
+					<p>인터파크투어</p>
+					<p>온라인투어</p>
+					<p>마이리얼트립</p>
+					<p>KKday</p>
+				</div>
+				<div class="col" id="shop">
+					<p>롯데홈쇼핑</p>
+					<p>신세계라이브쇼핑</p>
+					<p>홈앤쇼핑</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+	
 	</div>
 
 <!-- end -->
