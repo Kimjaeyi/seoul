@@ -13,19 +13,35 @@
 	
 	h1 {
 		font-family: 'GilbeotRainbow';
+		margin: 0 0 0 250px;
+		color : white;
 	}
 	
 	h2 {
 		text-align : center;
+		
+		color : white;
+	}
+	
+	a:link {
+			color:black;
+			text-decoration: none;
+	}
+	a:visited {
+			color:black;
+			text-decoration: none;
+	}
+	a:hover {
+			color:blueviolet;
+			text-decoration: none;
 	}
 	
 	body {
-		background-image: url("../image/loginbg.jpg");
+		background-image: url("../image/logbg.jpg");
 		background-repeat: no-repeat;
-	}
-	
-	.abc {
-		background-color : rgba(255,255,255,0.5);
+		background-size : cover;
+		width : 100%;
+		height : auto;
 	}
 
 	.container {
@@ -36,6 +52,10 @@
 	.aaa {
 		text-align : center;
 		margin : 0 30%;
+	}
+	
+	.abc {
+		background-color : rgba(255,255,255,0.5);
 	}
 	
 	
@@ -63,6 +83,24 @@
 	h6 {
 		color : white;
 	}
+	
+	.box {
+		margin : 0 22%;
+		width : 400px;
+		height : 70px;
+		background-color : #A9A9A9;
+		border: none;
+		border-radius : 6px;
+		text-align : center;
+	}
+	
+	.box p {
+		display : inline;
+		font-size : 15px;
+		margin: 0 1%;
+		color : white;
+		font-weight : bold;
+	}
 
 </style>
 	
@@ -71,7 +109,7 @@
 <!-- start -->
 	<div class="abc">
 		<br><br>
-		<h1 style="margin: 0 0 0 250px;">coocha</h1>
+		<h1>coocha</h1>
 		<br><br><br>
 		<div class="aaa">
 			<div class="container">
@@ -87,8 +125,9 @@
 				</div>
 					<br><br>
 				<div class="row justify-content-center">
+					<a href="../item/wmpitemList.html">
 					<button class="btn1" type="button">
-					<b>로그인</b></button>
+					<b>로그인</b></button></a>
 				</div>
 			</div>
 			<br>
@@ -112,14 +151,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="container">
-				<div class="row justify-content-center">
-					<a href="./findId.html"><h6 style="margin: 0 2%">아이디 찾기</h6></a>
-					<a href="./findPwd.html"><h6 style="margin: 0 2%">비밀번호 찾기</h6></a>
-					<a href="./RegForm.html"><h6 style="margin: 0 2%">회원가입</h6></a>
-					<br><br><br><br><br><br><br><br>
-				</div>
+			<br><br>
+			<div class="box">
+				<br>
+				<a href="./findId.html"><p>아이디 찾기 &nbsp;｜</p></a>
+				<a href="./findPwd.html"><p>비밀번호 찾기 &nbsp;｜</p></a>
+				<a href="./RegForm.html"><p>회원가입</p></a>
 			</div>
+			<br><br><br>
 		</div>
 	</div>
 	
