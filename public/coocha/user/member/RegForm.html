@@ -13,17 +13,34 @@
 	
 	h1 {
 		font-family: 'GilbeotRainbow';
+		color : white;
+		margin: 0 0 0 250px;
 	}
 	
 	h2 {
 		text-align : center;
+		color : white;
+	}
+	
+	a:link {
+			color:black;
+			text-decoration: none;
+	}
+	a:visited {
+			color:black;
+			text-decoration: none;
+	}
+	a:hover {
+			color:blueviolet;
+			text-decoration: none;
 	}
 	
 	body {
-		/* background-image: url('../image/loginbg.jpg'); */
+		background-image: url('../image/logbg.jpg');
 		background-repeat: no-repeat;
 		background-size : cover;
-		min-height : 100%;
+		width : 100%;
+		height : auto;
 	}
 
 	.container {
@@ -33,11 +50,11 @@
 	.aaa {
 		margin : 0 30%;
 	}
-	
+ 	
 	.abc {
 		background-color: rgba(255,255,255,0.5);
 	}
-	
+
 	h2, #loginbutton {
 		font-weight : bold;
 	}
@@ -68,7 +85,10 @@
 
 <!-- start -->
 	<div class="abc">
-		<h1 style="margin: 100px 0 0 200px;">coocha</h1>
+	<br><br>
+		<a href="../item/wmpitemList.html">
+			<h1>coocha</h1>
+		</a>
 		
 		<br>
 		<div class="aaa">
@@ -92,8 +112,25 @@
 				<br>
 				<h6>이메일</h6>
 				<input type="email" class="form-control" id="inputemail" placeholder="이메일을 입력해주세요">
+<!-- 				
+				<h6>주소</h6>
+				<div class="form-group m-form__group row">
+					<div class="col-md-2">
+						<input type="text" class="form-control m-input" name="postcode" id="postcode" placeholder="우편번호" readonly />
+					</div>
+					<div class="col-md-2 postcode-btn">
+						<button type="button" class="btn btn-info m-btn--air" onclick="execDaumPostcode()">우편번호 찾기</button>
+					</div>
+					<div class="col-md-4 offset-md-5">
+						<input type="text" class="form-control m-input m--margin-top-10" name="address" id="address" placeholder="도로명 주소" readonly/>
+					</div>
+					<div class="col-md-4 offset-md-5">
+						<input type="text" class="form-control m-input m--margin-top-10" name="detailAddress" placeholder="상세 주소" required/>
+					</div>
+				</div>
+ -->				
 			</div>
-			<br>
+<!-- 			
 			<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
 			<i class="fa-solid fa-square-check"></i> &nbsp;쿠차 가입 전체 약관에 동의합니다.</a>
 			<div class="collapse" id="collapseExample">
@@ -103,7 +140,7 @@
 					<br><i class="fa-solid fa-square-check"></i> &nbsp;개인정보 취급방침(필수)
 				</div>
 			</div>
- 
+ -->
 <!-- 			
 			<div class="accordion accordion-flush" id="accordionFlushExample" width="150" height="100">
 				<div class="accordion-item">
@@ -123,18 +160,36 @@
 			</div>
  -->			
 			<div class="d-grid" id="loginbutton" style="margin-top: 5rem">
-				<button class="btn" type="button" style="background-color: blueviolet; color: white; height: 50px">
+				<a href="../item/wmpitemList.html">
+				<button class="btn" type="button" style="background-color: blueviolet; color: white; width : 740px; height: 50px; float : center">
 				<b>회원가입</b></button>
+				</a>
 			</div>
+			<br><br>
 		</div>
 	</div>
 	
 
 <!-- end -->
 
+<script>
+/** 우편번호 찾기 */
+function execDaumPostcode() {
+    daum.postcode.load(function(){
+        new daum.Postcode({
+            oncomplete: function(data) {
+              // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+              $("#postcode").val(data.zonecode);
+              $("#address").val(data.roadAddress);
+            }
+        }).open();
+    });
+}
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://kit.fontawesome.com/7d63ec3c0a.js" crossorigin="anonymous"></script>
+<script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
 </body>
 </html>
