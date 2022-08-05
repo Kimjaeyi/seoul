@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>RegForm</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <style type="text/css">
@@ -139,10 +138,10 @@
 				<h6 style="color : black"><b>주소</b></h6>
 				<div class="row">
 					<div class="col-3">
-						<input type="text" class="form-control" name="zipcode" id="cczipcode" placeholder="우편번호" readonly>
+						<input type="text" class="form-control" id="cczipcode" placeholder="우편번호" readonly>
 					</div>
 					<div class="col-5">
-						<input type="button" id="findaddress" onclick="here();" value="우편번호 찾기">
+						<button type="button" id="findaddress" onclick="here();">우편번호 찾기</button>
 					</div>
 				</div>
 				<div class="col-12">
@@ -150,10 +149,10 @@
 				</div>
 				<div class="row">
 					<div class="col-9">
-						<input type="text" class="form-control" id="ccdetailAddress" placeholder="상세 주소" required>
+						<input type="text" class="form-control" id="ccdetailAddress" placeholder="상세주소">
 					</div>
 					<div class="col-3">
-						<input type="text" class="form-control" id="ccextraAddress" placeholder="참고 주소" required>
+						<input type="text" class="form-control" id="ccextraAddress" placeholder="참고항목">
 					</div>
 				</div>
 				
@@ -187,9 +186,12 @@
 	
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>	
-<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="/resources/common/jquery/jquery-ui-1.13.1.custom/jquery-ui.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
 <script type="text/javascript">
-
+	
 	function here() {
 	    new daum.Postcode({
 	        oncomplete: function(data) {
@@ -219,13 +221,12 @@
 	                document.getElementById("ccextraAddress").value = '';
 	            }
 	
-	            document.getElementById('cczipcode').value = data.zonecode;
+	            document.getElementById("cczipcode").value = data.zonecode;
 	            document.getElementById("ccaddress").value = addr;
 	            document.getElementById("ccdetailAddress").focus();
 	        }
 	    }).open();
 	}
 </script>
-
 </body>
 </html>
