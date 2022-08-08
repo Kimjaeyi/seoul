@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>findPw</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style type="text/css">
+
+	@import url('../css/font.css');
+	
+	h1 {
+		font-family: 'GilbeotRainbow';
+		float : left;
+		margin: 0 0 0 250px;
+	}
+	
+	h2 {
+		text-align : center;
+	}
+	
+	a:link {
+			color:black;
+			text-decoration: none;
+	}
+	a:visited {
+			color:black;
+			text-decoration: none;
+	}
+	a:hover {
+			color:mediumpurple;
+			text-decoration: none;
+	}
+	
+	body {
+		background-image: url('../image/findbg.jpg');
+		background-repeat: no-repeat;
+		background-size : cover;
+		background-position: 0 -200px;
+	}
+
+	.container {
+		margin : 27% 0 0 0;
+		float : center;
+	}
+	
+	.aaa {
+		text-align : center;
+		margin : 0 30%;
+	}
+	
+	.abc {
+		background-color: rgba(255,255,255,0.5);
+	}
+	
+	h2, #findbutton {
+		font-weight : bold;
+	}
+	
+	#findbutton {
+		background-color: blueviolet; 
+		color: white;
+		width : 420px;
+		height: 50px;
+	}
+	
+	button {
+		margin : 5px;
+	}
+	
+	input {
+		height: 50px;
+	}
+	
+	a {
+		text-align : center;
+	}
+	
+	h2, h4, input, .btn, select {
+    	font-family: 'MICEGothic Bold';
+	}
+	
+	h4 {
+		display: inline;
+		font-weight : bold;
+		margin : 0 3%;
+	}
+	
+	#inputGroupSelect01, #inputphone {
+		display : inline;
+		float : center;
+		margin : 0;
+	}
+	
+	#inputGroupSelect01 {
+		width : 100px;
+		height : 50px;
+	}
+	
+	#inputphone {
+		width : 318px;
+	}
+
+</style>
+	
+<body>
+
+<!-- start -->
+	<div class="abc">
+		<br><br>
+		<a href="../item/wmpitemList.html">
+			<h1>coocha</h1>
+		</a>
+		<br><br><br>
+		<div class="aaa">
+			<div class="container">
+				<h2><b>FIND ID / PW</b></h2>
+				<br><br><br>
+				<a href="./findId.html"><h4 style="color: lightgray">아이디 찾기</h4></a>
+				<a href="./findPwd.html"><h4>비밀번호 찾기</h4></a>
+				<br><br><br>
+				<div class="row justify-content-center">
+					<div class="col-7">
+						<input type="text" class="form-control" id="inputID" placeholder="아이디">
+						<br>
+					</div>
+				</div>
+				<div class="ccc">
+					<select class="form-select" id="inputGroupSelect01">
+						<option selected>선택</option>
+						<option value="1">010</option>
+						<option value="2">011</option>
+						<option value="3">016</option>
+						<option value="4">017</option>
+						<option value="5">018</option>
+						<option value="6">019</option>
+					</select>
+					<input type="text" class="form-control" id="inputphone" placeholder="휴대폰번호">
+				</div>
+				<br><br>
+				<button class="btn" id="findbutton" type="button">
+				<b>비밀번호 찾기</b></button>
+				<br><br><br><br><br><br><br><br><br><br>
+			</div>
+		</div>
+	</div>
+	
+
+<!-- end -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/7d63ec3c0a.js" crossorigin="anonymous"></script>
+</body>
+</html>
