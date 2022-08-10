@@ -47,18 +47,26 @@
 		font-weight : bold;
 		color : black;
 		margin : 0 2%;
-		padding : 5px;
 		float : left;
 	}
 	
-	.itembox {
-		margin : 5% 15%;
+	.card {
+		margin : 5% 18%;
+		border : none;
+	}
+	
+	.card-body {
+		margin : 0 0 0 8%;
 	}
 	
 	.aaa {
 		color : gray;
 		font-size : 12px;
 		margin : 0 15%;
+	}
+	
+	.card-text small {
+		color : darkgray;
 	}
 
 </style>
@@ -80,7 +88,7 @@
 	</div>
 	<hr style="color : gray">
 	<div class="cate">
-		<p style="margin : 0 2% 0 15%">홈</p>
+		<p style="margin : 0 2% 0 16%">홈</p>
 		<p>특가</p>
 		<p>마트위크</p>
 		<p>베스트</p>
@@ -103,8 +111,34 @@
 		</nav>
 	</div>
 	<hr style="color : gray">
-	<div class="itembox">
-		<img src="../image/위메프상세.jpg">
+	<div class="card">
+		<div class="row g-0">
+			<div class="col-md-5">
+			  <img src="../image/위메프상세.jpg" class="img-fluid rounded-start" alt="...">
+			</div>
+			<div class="col-md-7">
+			  <div class="card-body">
+				<h4 class="card-title">22만개 판매돌파! 1+3 리엔 물들임<br>새치커버 샴푸 450ml</h4>
+				<hr style="color : gray">
+				<h4 style="font-weight:bold; display:inline">37,770</h4>
+				<h5 style="display:inline">원</h5>
+				<hr style="color : gray">
+				<p class="card-text">
+					<small><i class="fa-solid fa-truck"></i> &nbsp;&nbsp;무료배송 ｜ 택배배송 ｜ 3일 이내 출고</small>
+					<br>
+					<small>(주말, 공휴일 제외)</small>
+					<br><br>
+					<small><i class="fa-solid fa-cart-shopping"></i> &nbsp;&nbsp;최대 999개까지 구매 가능</small>
+				</p>
+				<br><br>
+				<select class="form-select" aria-label="Default select example">
+					<option selected>옵션을 선택하세요</option>
+					<option value="1">1. 흑갈색</option>
+					<option value="2">2. 밝은 갈색</option>
+				</select>
+			  </div>
+			</div>
+		</div>
 	</div>
 
 <!-- end -->
