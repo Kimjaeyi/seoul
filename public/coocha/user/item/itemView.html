@@ -10,8 +10,8 @@
 
 <style type="text/css">
 
-	body {
-		margin : 10% 20%;
+	.abc {
+		margin : 2% 15% 3% 15%;
 	}
 	
 	.header img {
@@ -19,14 +19,92 @@
 		width : 90px;
 		height : 30px;
 	}
+	
+	#search {
+		width : 450px;
+		height : 50px;
+		margin : 0 0 0 20px;
+	}
+	
+	#logo, #search {
+		display : inline;
+	}
+	
+	.header p {
+		font-size : 13px;
+		margin : 0 1%;
+		float : right;
+		display : inline;
+		color : gray;
+	}
+	
+	.cate {
+		text-align : center;
+	}
+	
+	.cate p {
+		font-size : 14px;
+		font-weight : bold;
+		color : black;
+		margin : 0 2%;
+		padding : 5px;
+		float : left;
+	}
+	
+	.itembox {
+		margin : 5% 15%;
+	}
+	
+	.aaa {
+		color : gray;
+		font-size : 12px;
+		margin : 0 15%;
+	}
 
 </style>
 <body>
 
 <!-- start -->
 
-	<div class="header">
-		<img src="../image/위메프.png">
+	<div class="abc">
+		<div class="header">
+			<p>장바구니</p>
+			<p>마이페이지</p>
+			<p>고객센터</p>
+			<p>회원가입</p>
+			<p>로그인</p>
+			<br><br>
+			<img src="../image/위메프.png">
+			<input class="form-control" type="text" id="search">
+		</div>
+	</div>
+	<hr style="color : gray">
+	<div class="cate">
+		<p style="margin : 0 2% 0 15%">홈</p>
+		<p>특가</p>
+		<p>마트위크</p>
+		<p>베스트</p>
+		<p>베이비프로</p>
+		<p>디지털프로</p>
+		<p>마트프로</p>
+		<p>신규오픈</p>
+		<p>백화점·직구</p>
+	</div>
+	<br>
+	<hr style="color : gray">
+	<div class="aaa">
+		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><i class="fa-solid fa-house-chimney"></i> 홈</li>
+				<li class="breadcrumb-item">바디/헤어</li>
+				<li class="breadcrumb-item">샴푸/린스/헤어케어</li>
+				<li class="breadcrumb-item active" aria-current="page">샴푸/린스</li>
+			</ol>
+		</nav>
+	</div>
+	<hr style="color : gray">
+	<div class="itembox">
+		<img src="../image/위메프상세.jpg">
 	</div>
 
 <!-- end -->
