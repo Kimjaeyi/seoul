@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>findId</title>
+	<title>paysuccess</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
@@ -24,15 +24,10 @@
 	
 	h5 {
 		font-weight: bold;
-		margin: 0 0 0 250px;
-		display: inline;
 	}
 	
 	h6 {
-		float: right;
 		font-weight: bold;
-		margin: 0 250px 0 0;
-		display: inline;
 	}
 		
 	a:link {
@@ -55,11 +50,7 @@
 	
 	.aaa {
 		text-align : center;
-		margin : 0 30%;
-	}
-	
-	.abc {
-		background-color: rgba(255,255,255,0.5);
+		margin : 5% 20%;
 	}
 	
 	h2, #findbutton {
@@ -86,6 +77,8 @@
 	}
 	
 	h2, h4, input, .btn, select {
+	
+	
     	font-family: 'MICEGothic Bold';
 	}
 	
@@ -95,35 +88,13 @@
 		margin : 0 3%;
 	}
 	
-	#inputGroupSelect01, #inputphone {
-		display : inline;
-		float : center;
-		margin : 0;
+	table {
+		width: 100%;
+		border: 1px solid black;
+		border-collapse: collaspe;
+		text-align: center;
 	}
 	
-	#inputGroupSelect02, #inputemail {
-		display : inline;
-		float : center;
-		margin : 0;
-	}
-	
-	#inputGroupSelect01 {
-		width : 100px;
-		height : 50px;
-	}
-	
-	#inputGroupSelect02 {
-		width : 150px;
-		height : 50px;
-	}
-	
-	#inputemail {
-		width : 268px;
-	}
-	
-	#inputphone {
-		width : 318px;
-	}
 
 </style>
 	
@@ -138,46 +109,25 @@
 		<br><br><br>
 		<hr style="color: gray">
 		<br><br><br>
-		<h5><i class="fa-solid fa-circle-check"></i> 주문완료</h5>
-		<h6>01 장바구니 > 02 주문/결제 > 03 주문완료</h6>
+		<h5 style="margin: 0 0 0 250px; display: inline"><i class="fa-solid fa-circle-check"></i> 주문완료</h5>
+		<h6 style="float: right; margin: 0 250px 0 0; display: inline">01 장바구니 > 02 주문/결제 > 03 주문완료</h6>
 		<br>
 		<hr style="border: 2px solid black">
 		<div class="aaa">
-			<div class="container">
-				<h2><b>FIND ID / PW</b></h2>
-				<br><br><br>
-				<a href="./findId.html"><h4>아이디 찾기</h4></a>
-				<a href="./findPwd.html"><h4 style="color: lightgray">비밀번호 찾기</h4></a>
-				<br><br><br>
-				<div class="bbb">
-					<input type="text" class="form-control" id="inputemail" placeholder="이메일주소">
-					<select class="form-select" id="inputGroupSelect02">
-						<option selected>선택</option>
-						<option value="1">naver.com</option>
-						<option value="2">gmail.com</option>
-						<option value="3">hanmail.net</option>
-						<option value="4">nate.com</option>
-						<option value="5">직접입력</option>
-					</select>
-				</div>
-				<br>
-				<div class="ccc">
-					<select class="form-select" id="inputGroupSelect01">
-						<option selected>선택</option>
-						<option value="1">010</option>
-						<option value="2">011</option>
-						<option value="3">016</option>
-						<option value="4">017</option>
-						<option value="5">018</option>
-						<option value="6">019</option>
-					</select>
-					<input type="text" class="form-control" id="inputphone" placeholder="휴대폰번호">
-				</div>
-				<br><br>
-				<button class="btn" id="findbutton" type="button">
-				<b>아이디 찾기</b></button>
-				<br><br><br><br>
-			</div>
+			<h4 style="color: #6900EF">"감사합니다. 주문이 접수되었습니다."</h4>
+			<br>
+			<h6 style="float: left; margin: 10% 0 0 0">결제내역</h6>
+			<br>
+			<table>
+				<tr>
+					<td colspan="3">주문금액 </td>
+				</tr>
+				<tr>
+					<td>할인상품 </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+			</table>
 		</div>
 	</div>
 	
