@@ -5,10 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>payment</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-	<script src="/resources/common/jquery/jquery-ui-1.13.1.custom/jquery-ui.js"></script>
 </head>
 
 <style type="text/css">
@@ -76,7 +72,7 @@
 		display: inline;
 	}
 	
-	#choosecoupon {
+	#coupon1, #coupon2 {
 		border : none;
 		background-color : #6900EF;
 		color : white;
@@ -156,6 +152,9 @@
 <body>
 
 <!-- start -->
+	<input type="hidden" id="rtCount" name="rtCount">
+	<input type="hidden" id="rtFinalPrice" name="rtFinalPrice">
+	
 	<div class="abc">
 		<br><br>
 		<a href="../item/wmpitemList.html">
@@ -175,21 +174,21 @@
 				<div class="col-7" style="margin: 0 6% 0 0">
 					<h5>배송정보</h5>
 					<hr><br>
-					<input type="text" class="form-control" id="inputname" value="김재이" style="width: 54%">
+					<input type="text" class="form-control" id="inputname" value="김재이" placeholder="이름" style="width: 54%">
 					<br>
-					<input type="text" class="form-control" id="inputphone" value="010" style="width: 15%; margin: 0 3% 0 0">
+					<input type="text" class="form-control" id="inputphone" value="010" placeholder="휴대폰" style="width: 15%; margin: 0 3% 0 0">
 					<input type="text" class="form-control" id="inputphone" value="1234" style="width: 35%; margin: 0 3% 0 0">
 					<input type="text" class="form-control" id="inputphone" value="5678" style="width: 35%">
 					<br><br>
 					<button type="button" id="findzipcode" onclick="sample6_execDaumPostcode();" style="display: inline; margin: 0 3% 0 0">우편번호 찾기</button>
-					<input type="text" class="form-control" id="zipcode" style="width: 35%; display: inline" readonly>
+					<input type="text" class="form-control" id="zipcode" style="width: 35%; display: inline" value="06611" readonly>
 					<br><br>
 					<input type="text" class="form-control" id="inputaddr" value="서울 서초구 서초대로 77길 55" placeholder="도로명주소">
 					<br>
 					<input type="text" class="form-control" id="inputdetailaddr" value="3층" placeholder="상세주소" style="width: 80%; margin: 0 3% 0 0">
 					<input type="text" class="form-control" id="inputextraaddr" value="(서초동)" placeholder="참고항목" style="width: 16%">
 					<br><br>
-					<select class="form-select" aria-label="Default select example">
+					<select class="form-select" id="selbox" aria-label="Default select example">
 					  <option selected>배송메시지를 선택해주세요.</option>
 					  <option value="1">배송 전 연락바랍니다.</option>
 					  <option value="2">부재시 문앞에 놓아주세요.</option>
@@ -199,7 +198,7 @@
 					  <option value="direct">직접입력</option>
 					</select>
 					<br>
-					<input type="text" class="form-control" id="selboxDirect" name="selboxDirect"/>
+					<input type="text" class="form-control" id="selboxDirect" name="selboxDirect" placeholder="배송메시지"/>
 					<br><br><br>
 					<h5 style="display: inline">주문상품</h5>
 					<p style="display: inline; font-size: 11px; color: gray">상품수량 및 옵션 변경은 상품상세 또는 장바구니에서 가능합니다.</p>
@@ -221,26 +220,45 @@
 					<h5>할인쿠폰</h5>
 					<hr>
 					<div class="row justify-content-center">
-						<div class="col-3">
-							<p style="color: gray; font-weight: bold; font-size: 14px">적용가능 쿠폰</p>
+						<div class="col-3" style="text-align:center">
+							<p style="color: gray; font-weight: bold; font-size: 14px">쿠폰명</p>
 						</div>
-						<div class="col-3">
-							<p style="font-weight: bold; font-size: 14px">딜 전용쿠폰 0장</p>
+						<div class="col-3" style="text-align:center">
+							<p style="color: gray; font-weight: bold; font-size: 14px">쿠폰 할인금액</p>
 						</div>
-						<div class="col-3">
-							<p style="font-weight: bold; font-size: 14px">장바구니 쿠폰 2장</p>
+						<div class="col-3" style="text-align:center">
+							<p style="color: gray; font-weight: bold; font-size: 14px">쿠폰 유효기간</p>
+						</div>
+						<div class="col-2"></div>
+					</div>
+					<hr style="margin: -2px 0 15px 0">
+					<div class="row justify-content-center">
+						<div class="col-3" style="text-align:center">
+							<p style="font-weight: bold; font-size: 13px; margin: 5px 0 0 0">카카오페이 3,000원 할인</p>
+						</div>
+						<div class="col-3" style="text-align:center">
+							<p style="font-weight: bold; font-size: 13px; margin: 5px 0 0 0">3,000원</p>
+						</div>
+						<div class="col-3" style="text-align:center">
+							<p style="font-weight: bold; font-size: 13px; margin: 5px 0 0 0">~ 2022.12.31</p>
 						</div>
 						<div class="col-2">
-							<button type="button" id="choosecoupon">쿠폰선택</button>
+							<button type="button" id="coupon1" value="3000">쿠폰적용</button>
 						</div>
 					</div>
-					<hr>
+					<br>
 					<div class="row justify-content-center">
-						<div class="col-3">
-							<p style="color: gray; font-weight: bold; font-size: 14px">쿠폰할인 금액</p>
+						<div class="col-3" style="text-align:center">
+							<p style="font-weight: bold; font-size: 13px; margin: 5px 0 0 0">[장바구니] 쇼핑쿠폰</p>
 						</div>
-						<div class="col-8">
-							<p style="float: left; font-weight: bold; font-size: 14px">0원</p>
+						<div class="col-3" style="text-align:center">
+							<p style="font-weight: bold; font-size: 13px; margin: 5px 0 0 0">2,000원</p>
+						</div>
+						<div class="col-3" style="text-align:center">
+							<p style="font-weight: bold; font-size: 13px; margin: 5px 0 0 0">~ 2022.10.15</p>
+						</div>
+						<div class="col-2">
+							<button type="button" id="coupon2" value="2000">쿠폰적용</button>
 						</div>
 					</div>
 					<hr>
@@ -258,7 +276,7 @@
 						<br><br>
 						<h6 style="display: inline">상품금액</h6>
 						<h6 style="display: inline; float: right; margin: 3px 0 0 0">원</h6>
-						<h5 style="display: inline; float: right; font-weight: bold">37,700</h5>
+						<h5 id="totalprice" style="display: inline; float: right; font-weight: bold">37,700</h5>
 						<br><br>
 						<h6 style="display: inline">배송비</h6>
 						<h6 style="display: inline; float: right; margin: 3px 0 0 0">원</h6>
@@ -266,11 +284,11 @@
 						<br><br>
 						<h6 style="display: inline">할인금액</h6>
 						<h6 style="display: inline; float: right; margin: 3px 0 0 0">원</h6>
-						<h5 style="display: inline; float: right; font-weight: bold; color: #6900EF">3,000</h5>
+						<h5 id="couponprice" style="display: inline; float: right; font-weight: bold; color: #6900EF"></h5>
 						<br><br><br>
 						<h6 style="display: inline; color: #6900EF">합계</h6>
 						<h6 style="display: inline; float: right; margin: 10px 0 0 0; color: #6900EF">원</h6>
-						<h3 style="display: inline; float: right; color: #6900EF">34,700</h3>
+						<h3 id="realtotalprice" style="display: inline; float: right; color: #6900EF"></h3>
 					</div>
 					<br><br><br>
 					<hr style="border: 1px dotted black">
@@ -279,7 +297,7 @@
 						<h6>하기 필수약관을 확인하였으며 결제에 동의합니다.</h6>
 						<br>
 						<div class="d-grid">
-							<button type="button">34,700원 결제하기</button>
+							<button type="button">결제하기</button>
 						</div>
 						<br><br><br>
 						<h5 style="font-family: 'MICEGothic Bold'">약관동의</h5>
@@ -294,16 +312,17 @@
 					<hr>
 					<div class="paycheck">
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" id="agreebox" style="display:inline">
+							<input class="form-check-input" type="checkbox" name="agreebox" style="display:inline">
 							<h6 style="display:inline; font-weight: normal">개인정보 제3자 제공에 동의합니다.</h6>
 							<br><br>
-							<input class="form-check-input" type="checkbox" id="agreebox" style="display:inline">
+							<input class="form-check-input" type="checkbox" name="agreebox" style="display:inline">
 							<h6 style="display:inline; font-weight: normal">결제대행서비스 이용약관에 동의합니다.</h6>
 							<br><br>
-							<input class="form-check-input" type="checkbox" id="agreebox" style="display:inline">
+							<input class="form-check-input" type="checkbox" name="agreebox" style="display:inline">
 							<h6 style="display:inline; font-weight: normal">주문할 상품 설명에 명시된 내용과 사용조건을 확인하였으며, 취소 환불규정에 동의합니다.</h6>
 						</div>
 					</div>
+					<hr>
 				</div>
 			</div>
 		</div>
@@ -353,6 +372,11 @@
 		</div>
 	</div>
 	
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<script src="/resources/common/jquery/jquery-ui-1.13.1.custom/jquery-ui.js"></script>
+	
 	<script type="text/javascript">
 	
 	$(function(){
@@ -368,7 +392,39 @@
 		}) 
 	});
 	
+	var price1 = 37700;
+	var coochaCount = 1;
+	var totalprice = (price1*coochaCount);
+	var finalPrice = totalprice;
 	
+	/* 화면에 보여지는 부분 */
+	$("#totalprice").text(totalprice.toLocaleString());
+	$("#couponprice").text("0");
+	$("#realtotalprice").text(finalPrice.toLocaleString()); 
+	
+	/* 쿠폰 할인 적용 */
+	$(document).ready(function() {
+		   $("#coupon1").click(function(){
+		      var coupon1Price = $(this).attr('value');   
+		      $("#couponprice").text((coupon1Price)/1000 + ",000");
+		      $("#realtotalprice").text((finalPrice-coupon1Price).toLocaleString());
+		      $('#rtFinalPrice').val(totalprice-coupon1Price);
+		      $('#rtCoupon').val(coupon1Price); 
+		      
+		   });
+		   $("#coupon2").click(function(){
+		      var coupon2Price = $(this).attr('value');      
+		      $("#couponprice").text((coupon2Price)/1000 + ",000");
+		      $("#realtotalprice").text((finalPrice-coupon2Price).toLocaleString());
+		      $('#rtFinalPrice').val(totalprice-coupon2Price);
+		      $('#rtCoupon').val(coupon2Price); 
+		   });
+		});
+	
+	$("#rtCount").val(coochaCount);
+	$("#rtFinalPrice").val(finalPrice);
+	
+	// 약관 전체선택
 	$('#checkboxall').click(function() {
 		if ($("#checkboxall").is(':checked'))
 			$("input[name=agreebox]").prop("checked", true);
@@ -386,6 +442,7 @@
 			$("checkboxall").prop("checked", true);
 	});
 
+	
 	function sample6_execDaumPostcode() {
 	    new daum.Postcode({
 	        oncomplete: function(data) {
