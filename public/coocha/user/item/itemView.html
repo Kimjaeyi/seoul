@@ -10,6 +10,8 @@
 
 <style type="text/css">
 
+	@import url('../css/font.css');
+
 	.abc {
 		margin : 2% 15% 3% 15%;
 	}
@@ -18,6 +20,10 @@
 		margin : 0 15% 0 3%;
 		width : 90px;
 		height : 30px;
+	}
+	
+	h3, h4, h5, select, .itemtab {
+		font-family: 'MICEGothic Bold';
 	}
 	
 	#search {
@@ -71,15 +77,26 @@
 	
 	.itemtab {
 		text-align: center;
-		margin: 0 auto;
+		margin: 0 10%;
 		padding: 50px;
 		background: white;
 		max-width: 1500px;
 	}
 	
-	.content1 p, .content2 p, .content3 p, .content4 p {
-		margin: 0 0 20px;
+	#content1 {
+		margin: 0 15%;
+	}
+	
+	#content2, #content3, #content4 {
+		margin: 0 15%;
 		line-height: 1.5;
+		text-align: left;
+	}
+	
+	#content2 p, #content3 p, #content4 p, #content4 table {
+		margin: 5% 10%;
+		line-height: 1.5;
+		text-align: left;
 	}
 	
 	#tab1, #tab2, #tab3, #tab4, section {
@@ -110,13 +127,37 @@
 	input:checked + label {
 		color: #555;
 		border: 2px solid #ddd;
-		border-top: 2px solid #2e9cdf;
+		border-top: 2px solid #FF5959;
 		border-bottom: 1px solid white;
 	}
 	
 	#tab1:checked ~ #content1, #tab2:checked ~ #content2, 
 	#tab3:checked ~ #content3, #tab4:checked ~ #content4 {
 		display: block;
+	}
+	
+	#purchase {
+		border: none;
+		border-radius: 4px;
+		background-color: #FF5959;
+		color: white;
+		width: 180px;
+		height: 65px;
+		float: right;
+		font-family: 'MICEGothic Bold';
+		font-size: 22px;
+		letter-spacing: 1px;
+	}
+	
+	table {
+		width: 80%;
+	}
+	
+	tr, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+		padding : 20px;
+		margin: 5px 10px;
 	}
 
 </style>
@@ -162,13 +203,13 @@
 	</div>
 	<hr style="color : gray">
 	<div class="card">
-		<div class="row g-0">
-			<div class="col-md-5">
+		<div class="row">
+			<div class="col-5">
 			  <img src="../image/위메프상세.jpg" class="img-fluid rounded-start" alt="...">
 			</div>
-			<div class="col-md-7">
+			<div class="col-7">
 				 <div class="card-body">
-				<h4 class="card-title">22만개 판매돌파! 1+3 리엔 물들임<br>새치커버 샴푸 450ml</h4>
+				<h3 class="card-title">22만개 판매돌파! 1+3 리엔 물들임<br>새치커버 샴푸 450ml</h3>
 				<hr style="color : gray">
 				<h4 style="font-weight:bold; display:inline">37,770</h4>
 				<h5 style="display:inline">원</h5>
@@ -190,6 +231,8 @@
 				<h4 style="display:inline">총 상품 금액</h4>
 				<h5 style="display:inline; float:right">원</h5>
 				<h4 style="font-weight:bold; display:inline; float:right">0</h4>
+				<br><br><br><br>
+				<a href="../order/payment.html"><button type="button" id="purchase">구매하기</button></a>
 				</div>
 			</div>
 		</div>
@@ -205,16 +248,31 @@
 	    <input id="tab4" type="radio" name="tabs">
 	    <label for="tab4">배송·교환·반품</label>
 	    <section id="content1">
-	        <p>tab menu1의 내용adfadsfasfasdfas</p>
+	        <img src="../image/itemdetail.jpg">
 	    </section>
 	    <section id="content2">
-	        <p>tab menu2의 내용</p>
+	        <p>-</p>
 	    </section>
 	    <section id="content3">
-	        <p>tab menu3의 내용</p>
+	        <p>-</p>
 	    </section>
 	    <section id="content4">
-	        <p>tab menu4의 내용</p>
+	        <h5 style="font-weight: bold; margin: 5% 10%">배송/교환/반품</h5>
+	        <p font-size=10px><b>배송 안내</b></p>
+	        <table>
+	        	<tr>
+	        		<td width=200>배송비</td>
+	        		<td>무료배송</td>
+	        	</tr>
+	        	<tr>
+	        		<td width=200>배송방법/상품출고일</td>
+	        		<td>택배배송(CJ대한통운), 당일출고(오전 12시 이전 결제 건까지)</td>
+	        	</tr>
+	        	<tr>
+	        		<td width=200>배송가능지역</td>
+	        		<td>전국</td>
+	        	</tr>
+	        </table>
 	    </section>
 	</div>
 <!-- 상세정보사진 이어붙이기
