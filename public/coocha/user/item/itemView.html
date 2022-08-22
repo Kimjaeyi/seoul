@@ -171,6 +171,28 @@
 		padding : 20px;
 		margin: 5px 10px;
 	}
+	
+	.btn-go-top {
+		position: fixed;
+		bottom: 40px;
+		right: 40px;
+		width: 42px;
+		height: 42px;
+		z-index: 900;
+		background-image: url(../images/common/common/go-top.svg); 
+	}
+	.btn-go-top:hover {
+		background-image: url(../images/common/common/go-top-over.svg);
+		transition: background-image .2s ease; 
+	}
+	.blind {
+		position: absolute;
+		clip: rect(0 0 0 0);
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		overflow: hidden; 
+	}
 
 </style>
 <body>
@@ -288,6 +310,7 @@
 	        </table>
 	    </section>
 	</div>
+	<a href="#top" class="btn-go-top" data-scid="2227"><span class="blind">탑으로</span></a>
 <!-- 상세정보사진 이어붙이기
 https://front.wemakeprice.com/product/2196179307?search_keyword=%25EB%25A6%25AC%25EC%2597%2594%2520%25EB%25AC%25BC%25EB%2593%25A4%25EC%259E%2584%25EC%2583%25B4%25ED%2591%25B8&_service=5&_no=8
  -->
