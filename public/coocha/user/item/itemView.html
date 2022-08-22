@@ -5,10 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>itemView</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-	<link rel="stylesheet" href="//s.wemep.co.kr/ui/v2.8.571/dist/pc/css/common/common.css">
-	<link rel="stylesheet" href="//s.wemep.co.kr/ui/v2.8.571/dist/pc/css/common/layout.css">
-	<link rel="stylesheet" href="//s.wemep.co.kr/front/assets/css/motion.css?20220602_1">
-	<link rel="stylesheet" href="//s.wemep.co.kr/ui/v2.8.571/dist/pc/css/pages/main.css">
 </head>
 
 <style type="text/css">
@@ -26,13 +22,26 @@
 	}
 	
 	h3, h4, h5, select, .itemtab {
-		font-family: 'MICEGothic Bold';
+		font-family: 'KoPubWorldDotum';
+		font-weight: bold;
 	}
 	
 	#search {
 		width : 450px;
 		height : 50px;
 		margin : 0 0 0 20px;
+		display: inline;
+	}
+	
+	#searchbutton {
+		border: none; 
+		background-color: #FF5959;
+		color: white;
+		border-radius: 4px; 
+		width: 70px; 
+		height: 48px; 
+		display: inline;
+		font-weight: bold;
 	}
 	
 	#logo, #search {
@@ -178,6 +187,7 @@
 			<br><br>
 			<img src="../image/위메프.png">
 			<input class="form-control" type="text" id="search">
+			<button type="button" id="searchbutton">검색</button>
 		</div>
 	</div>
 	<hr style="color : gray">

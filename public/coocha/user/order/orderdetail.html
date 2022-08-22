@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>orderdetail</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style type="text/css">
+
+	@import url('../css/font.css');
+	
+	h1 {
+		font-family: 'GilbeotRainbow';
+		float : left;
+		margin: 0 0 0 250px;
+		color: #6900EF;
+	}
+	
+	h3, h5 {
+		font-family: 'MICEGothic Bold';
+	}
+	
+	h6, p {
+		font-family: 'ONE-Mobile-Regular';
+	}
+	
+	h5, h6 {
+		font-weight: bold;
+	}
+		
+	a:link {
+			color:black;
+			text-decoration: none;
+	}
+	a:visited {
+			color:black;
+			text-decoration: none;
+	}
+	a:hover {
+			color:mediumpurple;
+			text-decoration: none;
+	}
+
+	.aaa {
+		margin : 3% 20%;
+	}
+	
+	input {
+		height: 50px;
+	}
+	
+	h2, h4, input, .btn, select {
+    	font-family: 'MICEGothic Bold';
+	}
+	
+	h4 {
+		font-weight : bold;
+	}
+	
+	.col-4 p {
+		text-align: center;
+	}
+	
+	#btn1, #btn2 {
+		background-color: white; 
+		color: gray; 
+		border: 1px solid gray; 
+		border-radius: 4px; 
+		width: 85px; 
+		height: 40px; 
+		font-size: 13px;
+		display: inline;
+	}
+	
+	table, tr {
+		border: 1px solid black;
+		border-collapse: collaspe;
+		text-align: center;
+		width: 100%;
+	}
+	
+	td {
+		padding: 20px;
+		border: 1px solid black;
+	}
+	
+	.container {
+		margin : 0 15%;
+		width : 100%;
+		height: 100%;
+		font-family: 'ONE-Mobile-Regular';
+	}
+	
+	#under p {
+		font-size : 13px;
+	}
+	
+	.footer {
+		font-size : 13px;
+		margin : 0 0 5% 0;
+	}
+	
+	.foot p {
+		margin: 0 5% 0 0;
+		display : inline;
+		color : #6C6C6C;
+	}
+
+</style>
+	
+	
+<body>
+
+<!-- start -->
+	<div class="abc">
+		<br><br>
+		<a href="../item/Mainpage.html">
+			<h1 style="display: inline">coocha</h1>
+		</a>
+		<a href="../member/mypage.html">
+		<p style="display: inline; font-size: 15px; font-weight: bold; float: right; margin: 30px 300px 0 0; font-family: 'MICEGothic Bold'">MY</p>
+		</a>
+		<br><br><br>
+		<hr style="color: gray">
+		<br><br><br>
+		<div class="aaa">
+			<div class="row">
+				<div class="col-3">
+					<h3 style="color: #6900EF">마이쿠차</h3>
+					<br><br><br>
+					<h6 style="color: #6900EF">주문배송조회</h6>
+					<br>
+					<a href="../member/infoModForm.html"><h6>회원정보 수정</h6></a>
+				</div>
+				<div class="col-8">
+					<h4>주문상세내역</h4>
+					<br>
+					<div class="row justify-content-center" style="border: 1px solid gray; border-radius: 4px; padding: 20px">
+					<br>
+						<div class="col-3" style="font-weight: bold">
+							<p style="font-size: 13px; display:inline"><b>주문일자</b></h6>
+							<p style="font-size: 13px; display:inline">2022-07-22</h6>
+						</div>
+						<div class="col-5" style="font-weight: bold">
+							<h6 style="font-size: 13px; display:inline"><b>구매번호</b></h6> 
+							<h6 style="font-size: 13px; display:inline">202207221234567789011</h6>
+						</div>
+						<div class="col-4">
+							<button type="button" id="btn1">거래명세서</button>
+							<button type="button" id="btn2">영수증조회</button>
+						</div>
+					</div>
+					<br><br><br>
+					<hr>
+					<div class="row justify-content-center">
+						<div class="col-3" style="text-align:center">
+							<p style="color: gray; font-size: 13px; font-weight: bold">주문일/구매번호</p>
+						</div>
+						<div class="col-5" style="text-align:center">
+							<p style="color: gray; font-size: 13px; font-weight: bold">상품정보</p>
+						</div>
+						<div class="col-2" style="text-align:center">
+							<p style="color: gray; font-size: 13px; font-weight: bold">상품금액</p>
+						</div>
+						<div class="col-2" style="text-align:center">
+							<p style="color: gray; font-size: 13px; font-weight: bold">관리</p>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-3" style="text-align:center">
+							<br>
+							<p style="font-size: 13px; font-weight: bold">2022-07-22</p>
+							<a href="../order/orderdetail.html">
+							<p style="color: gray; font-size: 13px; font-weight: bold; text-decoration: underline">2022072212</p>
+							<p style="color: gray; font-size: 13px; font-weight: bold; text-decoration: underline; margin: -15px 0 0 0">3456789011</p>
+							</a>
+						</div>
+						<div class="col-2" style="text-align:center">
+							<img src="../image/위메프1.png" style="width:100px; height: 100px; display: inline">
+						</div>
+						<div class="col-3">
+							<br>
+							<p style="color: gray; font-size: 13px">
+							22만개 판매돌파! 1+3 리엔 물들임 새치커버 샴푸 450ml</p>
+						</div>
+						<div class="col-2" style="text-align:center">
+							<br>
+							<p style="color: gray; font-size: 13px; font-weight: bold">37,700원</p>
+							<p style="color: gray; font-size: 13px">(1개)</p>
+						</div>
+						<div class="col-2" style="text-align:center">
+							<br>
+							<p style="color: gray; font-size: 13px; font-weight: bold; color: #6900EF">상품준비중</p>
+							<button type="button" style="font-size: 12px; border: none; border-radius: 4px">배송조회</button>
+							<button type="button" style="font-size: 12px; border: none; border-radius: 4px">상품리뷰작성</button>
+						</div>
+					</div>
+					<hr>
+					<br><br><br>
+					<h4>배송지 정보</h4>
+					<hr>
+					<div class="row justify-content-center">
+						<div class="col-4">
+							<p font-size=14px><b>받는 사람 이름</b></p>
+							<hr style="color: gray">
+							<p font-size=14px><b>연락처</b></p>
+							<hr style="color: gray">
+							<p font-size=14px><b>주소</b></p>
+							<hr style="color: gray">
+							<p font-size=14px><b>배송시 요청사항</b></p>
+						</div>
+						<div class="col-8">
+							<p font-size=14px>김*이</p>
+							<hr style="color: gray">
+							<p font-size=14px>010-****-5678</p>
+							<hr style="color: gray">
+							<p font-size=14px>[12345] 서울특별시 서초구 서초대로 77길 **********</p>
+							<hr style="color: gray">
+							<p font-size=14px>문앞에 놓아주세요.</p>
+						</div>
+						<hr>
+					</div>
+					<br><br><br>
+					<h4>결제 금액 정보</h4>
+					<hr>
+					<div class="row justify-content-center">
+						<div class="col-4">
+							<p font-size=14px><b>주문금액</b></p>
+							<hr style="color: gray">
+							<p font-size=14px><b>할인금액</b></p>
+							<hr style="color: gray">
+							<p font-size=14px><b>총 결제금액</b></p>
+							<hr style="color: gray">
+							<p font-size=14px><b>적립혜택</b></p>
+						</div>
+						<div class="col-3">
+							<p font-size=14px>37,700원</p>
+							<hr style="color: gray">
+							<p font-size=14px>3,000원</p>
+							<hr style="color: gray">
+							<p font-size=14px>34,700원</p>
+							<hr style="color: gray">
+							<p font-size=14px>상품리뷰 작성 시</p>
+						</div>
+						<div class="col-5">
+							<p font-size=14px>상품금액 37,700원</p>
+							<hr style="color: gray">
+							<p font-size=14px>카카오페이 결제 3,000원 할인</p>
+							<hr style="color: gray">
+							<p font-size=14px>카카오페이 34,700원</p>
+							<hr style="color: gray">
+							<p font-size=14px>- 리뷰 작성 시 포인트 적립</p>
+						</div>
+						<hr>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<br><br>
+	<hr>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col" id="under">
+				<p>앱 다운로드</p>
+			</div>
+			<div class="col" id="under">
+				<p>회사소개</p>
+			</div>
+			<div class="col" id="under">
+				<p>고객센터</p>
+			</div>
+			<div class="col" id="under">
+				<p>서비스이용약관</p>
+			</div>
+			<div class="col" id="under">
+				<p><b>개인정보처리방침</b></p>
+			</div>
+			<div class="col" id="under">
+				<p>마케팅센터</p>
+			</div>
+			<div class="col" id="under">
+				<p>입점 및 광고 안내</p>
+			</div>
+		</div>
+		<br>
+		<p style="color: #6C6C6C; font-size: 13px"><b>쿠차는 상품에 직접 관여하지 않으며 상품 주문, 배송 및 환불의 의무와 책임은 각 판매업체에 있습니다.</b></p>
+		<br>
+		<div class="footer">
+			<div class="foot">
+				<p>(주) jj컴퍼니</p>
+				<p>대표 김재이</p>
+				<p>사업자등록번호 123-22-07310</p>
+			</div>
+			<br>
+			<div class="foot">
+				<p>서울시 서초구 서초대로 77길 55 에이프로스퀘어 3층</p>
+				<p>고객센터 cs_jy@coocha.com</p>
+				<p>입점 · 광고 business@coocha.com</p>
+			</div>
+			<br>
+			<p>ⓒ 2022. SearchFy Inc. All Rights Reserved.</p>
+		</div>
+	</div>
+	
+
+<!-- end -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/7d63ec3c0a.js" crossorigin="anonymous"></script>
+</body>
+</html>
