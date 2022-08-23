@@ -9,6 +9,15 @@
 	<script src="/static/js/lib/jquery-1.11.3.min.js"></script>
 	<script src="/static/js/common/tracker.js"></script>
 </head>
+
+<style type="text/css">
+
+	#wmplist {
+		
+	}
+
+</style>
+
 <body>
 
 	<div class="dim-bg"></div>
@@ -600,8 +609,7 @@
             	<div class="tab-1depth">
 	                <!-- top10 업체영역 -->
 	                <ul id="topDealShopList">
-	                    <li><a href="javascript:topDealShopClick('WEMAKEPRICE', '1');"
-	                           class="top-WEMAKEPRICE on">위메프</a></li>
+	                    <li><a href="#" class="top-WEMAKEPRICE on" onclick="showTab('wmplist');">위메프</a></li>
 	                    <li><a href="javascript:topDealShopClick('ticketmonster', '2');"
 	                           class="top-ticketmonster">티몬</a></li>
 	                    <li><a href="javascript:topDealShopClick('11st', '3');"
@@ -609,7 +617,7 @@
 	                <!-- //top10 업체영역 -->
 	            </div>
 	        </div>
-	        <div class="contents" id="topDealComponent">
+	        <div class="contents" id="wmplist">
 	            <div class="slider">
 	                <!-- top10 딜영역 -->
 	                <div class="slide">
@@ -942,7 +950,10 @@
 				                            </div>
 				                        </div>
 				                        <div class="aside">
-				                            <span class="shopping-mall">쿠팡</span>
+				                            <span class="pay">
+			                                    <span class="easy-pay"><img src="http://images.coocha.co.kr/static/images/deal/easypay/spay-11.png?20200604" alt=""></span>
+			                                </span>
+				                            <span class="shopping-mall">티몬</span>
 			                            </div>
 				                        <div class="btns">
 				                            <button type="button" class="btn-like no-link " data-did="841602084" data-scid="2615"><span class="blind">좋아요</span></button>
@@ -1376,33 +1387,6 @@
 <script src="/static/js/main/main.js"></script>
 <script src="/static/js/search/keyword.js"></script>
 
-<!-- 2019.08.14 Criteo Script -->
-<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
-<script type="text/javascript">
-window.criteo_q = window.criteo_q || [];
-window.criteo_q.push(
-       { event: "setAccount", account: 21261 },
-       { event: "setEmail", email: "" },
-       { event: "setSiteType", type: "d" },
-       { event: "viewHome" }
-);
-</script>
-
-<script>
-  Tracker.initClickEvent();
-</script>
-
-<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	ga('create', 'UA-25563744-2', 'coocha.co.kr');
-	ga('require', 'displayfeatures');
-	ga('send', 'pageview');
-</script>
-
 <script>
 	(function() {
 		var _fbq = window._fbq || (window._fbq = []);
@@ -1434,18 +1418,7 @@ window.criteo_q.push(
 </script>
 
 <script type="text/javascript">
-  var uid = getCookie('encodeMid');
-  window._rblq = window._rblq || [];
-  _rblq.push(['setVar','cuid','c433f013-6b76-470d-b832-5506d1179bb3']);
-  _rblq.push(['setVar','device','PW']);
-  if(!!uid) {
-    _rblq.push(['setVar', 'userId', uid]); // optional
-  }
-  _rblq.push(['track','visit']);
-  (function(s,x){s=document.createElement('script');s.type='text/javascript';
-    s.async=true;s.defer=true;s.src=(('https:'==document.location.protocol)?'https':'http')+
-      '://assets.recobell.io/rblc/js/rblc-apne1.min.js';
-    x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);})();
+
 </script>
 
 </body>
