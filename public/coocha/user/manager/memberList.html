@@ -17,7 +17,7 @@
 		font-family: 'GilbeotRainbow';
 	}
 	
-	h4 {
+	h4, #myTab {
 		font-family: 'MICEGothic Bold';
 	}
 	
@@ -68,6 +68,23 @@
 		float: right;
 	}
 	
+	.nav-tabs {
+		--bs-nav-tabs-link-active-color: #6900EF;
+		--bs-nav-tabs-link-active-border-color: #6900EF #6900EF #fff; 
+	}
+	
+	.nav {
+		--bs-nav-link-hover-color: #9154f3;
+	}
+	
+	.nav-link {
+		color : gray;
+	}
+	
+	.bbb {
+		margin: 5% 10%;
+	}
+	
 </style>
 	
 <body>
@@ -77,170 +94,237 @@
 		<h1 style="margin: 30px 0 0 10%">coocha</h1>
 		<br><hr><br>
 		<div class="member">
-			<h4>회원관리</h4>
-			<br>
-			<div class="searchhead">
-				<div class="row">
-					<div class="col-1">
-						<h5><b>검색분류</b></h5>
-					</div>
-					<div class="col">
-						<div class="row justify-content-end">
-							<div class="col-2">
-								<select class="form-select" id="inputGroupSelect1">
-									<option selected>구분</option>
-									<option value="1">MANAGER</option>
-									<option value="2">VVIP</option>
-									<option value="3">VIP</option>
-									<option value="4">일반</option>
-								 </select>
-							</div>
-							<div class="col-2">
-								<select class="form-select" id="inputGroupSelect1">
-									<option selected>탈퇴여부</option>
-									<option value="1">Y</option>
-									<option value="2">N</option>
-								 </select>
-							</div>
-							<div class="col-2">
-								<select class="form-select" id="inputGroupSelect3">
-									<option selected>날짜선택</option>
-									<option value="1">생년월일</option>
-									<option value="2">가입일</option>
-								</select>
-							</div>
-							<div class="col-2">
-								<input type="date" class="form-control">
-							</div>
-							<div class="col-2">
-								<select class="form-select" id="inputGroupSelect2">
-									<option selected>선택</option>
-									<option value="1">이름</option>
-									<option value="2">이메일</option>
-									<option value="3">연락처</option>
-								 </select>
-							</div>
-							<div class="col-2">
-								<input class="form-control" type="search" id="search_input" placeholder="검색어 입력">
-							</div>
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">회원 관리</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">회원 상세정보</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">회원정보 수정</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+					<br>
+					<div class="searchhead">
+						<div class="row">
 							<div class="col-1">
-								<button class="btn btn-outline-secondary" type="submit" id="search_btn">조회</button>
+								<h5><b>검색분류</b></h5>
+							</div>
+							<div class="row justify-content-end">
+								<div class="col-2">
+									<select class="form-select" id="inputGroupSelect1">
+										<option selected>구분</option>
+										<option value="1">MANAGER</option>
+										<option value="2">VVIP</option>
+										<option value="3">VIP</option>
+										<option value="4">일반</option>
+									 </select>
+								</div>
+								<div class="col-2">
+									<select class="form-select" id="inputGroupSelect1">
+										<option selected>탈퇴여부</option>
+										<option value="1">Y</option>
+										<option value="2">N</option>
+									 </select>
+								</div>
+								<div class="col-2">
+									<select class="form-select" id="inputGroupSelect3">
+										<option selected>날짜선택</option>
+										<option value="1">생년월일</option>
+										<option value="2">가입일</option>
+									</select>
+								</div>
+								<div class="col-2">
+									<input type="date" class="form-control">
+								</div>
+								<div class="col-2">
+									<select class="form-select" id="inputGroupSelect2">
+										<option selected>선택</option>
+										<option value="1">이름</option>
+										<option value="2">이메일</option>
+										<option value="3">연락처</option>
+									 </select>
+								</div>
+								<div class="col-2">
+									<input class="form-control" type="search" id="search_input" placeholder="검색어 입력">
+								</div>
+								<div class="col-1">
+									<button class="btn btn-outline-secondary" type="submit" id="search_btn">조회</button>
+								</div>
 							</div>
 						</div>
 					</div>
+					<h4>회원관리</h4>
+					<button type="button" class="btn btn-danger" id="delbtn" style="margin: 0 0 0 20px"><i class="fa-solid fa-minus"></i><i class="fa-solid fa-user"></i></button>
+					<a href="memberReg.html">
+					<button type="button" class="btn btn-outline-success" id="regbtn"><i class="fa-solid fa-plus"></i><i class="fa-regular fa-user"></i></button>
+					</a>
+					<br><br>
+					<table class="table table-light table-striped table-hover">
+						<thead>
+							<tr>
+								<th scope="col"><input class="form-check-input" type="checkbox" name="check" id="allcheck"></th>
+								<th scope="col">번호</th>
+								<th scope="col">등급</th>
+								<th scope="col">이름</th>
+								<th scope="col">생년월일</th>
+								<th scope="col">이메일</th>
+								<th scope="col">연락처</th>
+								<th scope="col">가입일</th>
+								<th scope="col">탈퇴여부</th>
+							</tr>
+						</thead>
+						<tbody class="table-group-divider">
+							<tr data-tr_value = "1">
+								<td><input class="form-check-input" type="checkbox" name="check" value="1"></td>
+								<td scope="row">1</td>
+								<td>MANAGER</td>
+								<td>김재이</td>
+								<td>1997-11-18</td>
+								<td>kjy@coocha.com</td>
+								<td>010-1234-5678</td>
+								<td>2012-04-12</td>
+								<td>N</td>
+							</tr>
+							<tr data-tr_value = "2">
+								<td><input class="form-check-input" type="checkbox" name="check" value="2"></td>
+								<td scope="row">2</td>
+								<td>VIP</td>
+								<td>임시완</td>
+								<td>1988-12-01</td>
+								<td>ysw@gmail.com</td>
+								<td>010-2222-3333</td>
+								<td>2014-12-26</td>
+								<td>N</td>
+							</tr>
+							<tr data-tr_value = "3">
+								<td><input class="form-check-input" type="checkbox" name="check" value="3"></td>
+								<td scope="row">3</td>
+								<td>VVIP</td>
+								<td>유예린</td>
+								<td>1993-08-03</td>
+								<td>uyl@gmail.com</td>
+								<td>010-3333-4444</td>
+								<td>2016-01-03</td>
+								<td>N</td>
+							</tr>
+							<tr data-tr_value = "4">
+								<td><input class="form-check-input" type="checkbox" name="check" value="4"></td>
+								<td scope="row">4</td>
+								<td>VIP</td>
+								<td>이재현</td>
+								<td>1997-09-13</td>
+								<td>ljh@gmail.com</td>
+								<td>010-4444-5555</td>
+								<td>2017-10-11</td>
+								<td>N</td>
+							</tr>
+							<tr data-tr_value = "5">
+								<td><input class="form-check-input" type="checkbox" name="check" value="5"></td>
+								<td scope="row">5</td>
+								<td>VIP</td>
+								<td>장하연</td>
+								<td>1995-11-15</td>
+								<td>jhy@gmail.com</td>
+								<td>010-5555-6666</td>
+								<td>2019-05-22</td>
+								<td>N</td>
+							</tr>
+							<tr data-tr_value = "6">
+								<td><input class="form-check-input" type="checkbox" name="check" value="6"></td>
+								<td scope="row">6</td>
+								<td>일반</td>
+								<td>김가을</td>
+								<td>1990-05-30</td>
+								<td>kge@gmail.com</td>
+								<td>010-6666-7777</td>
+								<td>2020-03-19</td>
+								<td>Y</td>
+							</tr>
+							<tr data-tr_value = "7">
+								<td><input class="form-check-input" type="checkbox" name="check" value="7"></td>
+								<td scope="row">7</td>
+								<td>일반</td>
+								<td>김동욱</td>
+								<td>1999-01-18</td>
+								<td>kdw@gmail.com</td>
+								<td>010-7777-8888 </td>
+								<td>2021-09-30</td>
+								<td>Y</td>
+							</tr>
+							<tr data-tr_value = "8">
+								<td><input class="form-check-input" type="checkbox" name="check" value="8"></td>
+								<td scope="row">8</td>
+								<td>VIP</td>
+								<td>한동윤</td>
+								<td>1998-02-20</td>
+								<td>hdy@gmail.com</td>
+								<td>010-6666-7777</td>
+								<td>2022-06-15</td>
+								<td>N</td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+					<br><br>
 				</div>
 			</div>
-			<table class="table table-light table-striped table-hover">
-				<thead>
-					<tr>
-						<th scope="col"><input class="form-check-input" type="checkbox" name="check" id="allcheck"></th>
-						<th scope="col">번호</th>
-						<th scope="col">등급</th>
-						<th scope="col">이름</th>
-						<th scope="col">생년월일</th>
-						<th scope="col">이메일</th>
-						<th scope="col">연락처</th>
-						<th scope="col">가입일</th>
-						<th scope="col">탈퇴여부</th>
-					</tr>
-				</thead>
-				<tbody class="table-group-divider">
-					<tr>
-						<td><input class="form-check-input" type="checkbox" name="check"></td>
-						<td scope="row">1</td>
-						<td>MANAGER</td>
-						<td>김재이</td>
-						<td>1997-11-18</td>
-						<td>kjy@coocha.com</td>
-						<td>010-1234-5678</td>
-						<td>2012-04-12</td>
-						<td>N</td>
-					</tr>
-					<tr>
-						<td><input class="form-check-input" type="checkbox" name="check"></td>
-						<td scope="row">2</td>
-						<td>VVIP</td>
-						<td>유예린</td>
-						<td>1993-08-03</td>
-						<td>uyl@gmail.com</td>
-						<td>010-2222-3333</td>
-						<td>2014-12-26</td>
-						<td>N</td>
-					</tr>
-					<tr>
-						<td><input class="form-check-input" type="checkbox" name="check"></td>
-						<td scope="row">3</td>
-						<td>VIP</td>
-						<td>임시완</td>
-						<td>1988-12-01</td>
-						<td>ysw@gmail.com</td>
-						<td>010-3333-4444</td>
-						<td>2016-01-05</td>
-						<td>N</td>
-					</tr>
-					<tr>
-						<td><input class="form-check-input" type="checkbox" name="check"></td>
-						<td scope="row">4</td>
-						<td>VIP</td>
-						<td>이재현</td>
-						<td>1997-09-13</td>
-						<td>ljh@gmail.com</td>
-						<td>010-4444-5555</td>
-						<td>2017-10-11</td>
-						<td>N</td>
-					</tr>
-					<tr>
-						<td><input class="form-check-input" type="checkbox" name="check"></td>
-						<td scope="row">5</td>
-						<td>VIP</td>
-						<td>장하연</td>
-						<td>1995-11-15</td>
-						<td>jhy@gmail.com</td>
-						<td>010-5555-6666</td>
-						<td>2019-05-22</td>
-						<td>N</td>
-					</tr>
-					<tr>
-						<td><input class="form-check-input" type="checkbox" name="check"></td>
-						<td scope="row">6</td>
-						<td>일반</td>
-						<td>김가을</td>
-						<td>1990-05-30</td>
-						<td>kge@gmail.com</td>
-						<td>010-6666-7777</td>
-						<td>2020-03-19</td>
-						<td>Y</td>
-					</tr>
-					<tr>
-						<td><input class="form-check-input" type="checkbox" name="check"></td>
-						<td scope="row">7</td>
-						<td>일반</td>
-						<td>김동욱</td>
-						<td>1999-01-18</td>
-						<td>kdw@gmail.com</td>
-						<td>010-7777-8888 </td>
-						<td>2021-09-30</td>
-						<td>Y</td>
-					</tr>
-					
-					<tr>
-						<td><input class="form-check-input" type="checkbox" name="check"></td>
-						<td scope="row">8</td>
-						<td>VIP</td>
-						<td>한동윤</td>
-						<td>1998-02-20</td>
-						<td>hdy@gmail.com</td>
-						<td>010-6666-7777</td>
-						<td>2022-06-15</td>
-						<td>N</td>
-					</tr>
-				</tbody>
-			</table>
-			<br>
-			<button type="button" class="btn btn-danger" id="delbtn" style="margin: 0 0 0 20px">회원삭제</button>
-			<a href="memberReg.html">
-			<button type="button" class="btn btn-outline-success" id="regbtn">회원등록</button>
-			</a>
+			<div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+				<br>
+				<div class="bbb">
+					<h4>기본 정보</h4>
+					<br>
+					<table class="table table-striped-columns">
+						<tbody class="table-group-divider">
+							<tr>
+								<th width="30" scope="col">아이디</th>
+								<td width="70" scope="col"></td>
+							</tr>
+							<tr>
+								<th scope="row">이름</th>
+								<td>Mark</td>
+							</tr>
+							<tr>
+								<th scope="row">신규 비밀번호</th>
+								<td>Jacob</td>
+							</tr>
+							<tr>
+								<th scope="row">신규 비밀번호 확인</th>
+								<td>Jacob</td>
+							</tr>
+							<tr>
+								<th scope="row">휴대폰 번호</th>
+								<td>Jacob</td>
+							</tr>
+							<tr>
+								<th scope="row">이메일</th>
+								<td>Jacob</td>
+							</tr>
+							<tr>
+								<th scope="row">개인정보 유효기간</th>
+								<td>Jacob</td>
+							</tr>
+							<tr>
+								<th scope="row">닉네임</th>
+								<td>Jacob</td>
+							</tr>
+							<tr>
+								<th scope="row">생년월일</th>
+								<td>Jacob</td>
+							</tr>
+							<tr>
+								<th scope="row">성별</th>
+								<td>Jacob</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+			</div>
 		</div>
 	</div>
 
@@ -259,6 +343,18 @@ $(document).ready(function() {
 		if(total != checked) $("#allcheck").prop("checked", false);
 		else $("#allcheck").prop("checked", true); 
 	});
+	
+	$('#delbtn').click(function(){
+        if(confirm("삭제하시겠습니까?")){
+            $("input[name=check]:checked").each(function(){
+                var tr_value =$(this).val();
+                var tr=$("tr[data-tr_value='"+tr_value+"']");
+                tr.remove();
+            });
+        }else{
+            return false;
+        }
+    });
 });
 /* 	
 	button = document.querySelector('button');
