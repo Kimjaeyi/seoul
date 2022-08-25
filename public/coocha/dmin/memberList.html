@@ -11,7 +11,7 @@
 
 <style type="text/css">
 
-	@import url('../css/font.css');
+	@import url('css/font.css');
 	
 	h1 {
 		font-family: 'GilbeotRainbow';
@@ -48,6 +48,7 @@
 	th, td {
 		text-align : center;
 		font-family: 'MICEGothic';
+		vertical-align: middle;
 	}
 	
 	.row {
@@ -68,6 +69,11 @@
 		float: right;
 	}
 	
+	.table {
+		--bs-table-accent-bg: rgba(0, 0, 0, 0.05);
+		--bs-table-striped-bg: #ffffff;
+	}
+	
 	.nav-tabs {
 		--bs-nav-tabs-link-active-color: #6900EF;
 		--bs-nav-tabs-link-active-border-color: #6900EF #6900EF #fff; 
@@ -83,6 +89,18 @@
 	
 	.bbb {
 		margin: 5% 10%;
+	}
+	
+	#modbtn {
+		float: center;
+		background-color: #9154f3;
+		color: white;
+		border: none;
+		border-radius: 4px;
+		width: 140px;
+		height: 60px;
+		font-size: 20px;
+		font-family: 'MICEGothic Bold';
 	}
 	
 </style>
@@ -281,50 +299,207 @@
 						<tbody class="table-group-divider">
 							<tr>
 								<th width="30" scope="col">아이디</th>
-								<td width="70" scope="col"></td>
+								<td width="70" scope="col"><input class="form-control" id="notmod" "type="text" placeholder="ysw" disabled></td>
 							</tr>
 							<tr>
 								<th scope="row">이름</th>
-								<td>Mark</td>
+								<td><input class="form-control" id="notmod" type="text" placeholder="임시완" disabled></td>
 							</tr>
 							<tr>
 								<th scope="row">신규 비밀번호</th>
-								<td>Jacob</td>
+								<td><input class="form-control" type="password" value="12345"></td>
 							</tr>
 							<tr>
 								<th scope="row">신규 비밀번호 확인</th>
-								<td>Jacob</td>
+								<td><input class="form-control" type="password"></td>
 							</tr>
 							<tr>
 								<th scope="row">휴대폰 번호</th>
-								<td>Jacob</td>
+								<td><input class="form-control" type="text" value="010-2222-3333" disabled readonly></td>
 							</tr>
 							<tr>
 								<th scope="row">이메일</th>
-								<td>Jacob</td>
+								<td><input class="form-control" type="text" value="ysw@gmail.com" disabled readonly></td>
 							</tr>
 							<tr>
 								<th scope="row">개인정보 유효기간</th>
-								<td>Jacob</td>
+								<td>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+										<label class="form-check-label" for="flexRadioDefault1">3년</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+										<label class="form-check-label" for="flexRadioDefault2">1년</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+										<label class="form-check-label" for="flexRadioDefault1">탈퇴 시 파기</label>
+									</div>
+								</td>
 							</tr>
 							<tr>
 								<th scope="row">닉네임</th>
-								<td>Jacob</td>
+								<td><input class="form-control" type="text" value="null(선택사항)" disabled readonly></td>
 							</tr>
 							<tr>
 								<th scope="row">생년월일</th>
-								<td>Jacob</td>
+								<td><input class="form-control" type="text" value="null(선택사항)" disabled readonly></td>
 							</tr>
 							<tr>
 								<th scope="row">성별</th>
-								<td>Jacob</td>
+								<td>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+										<label class="form-check-label" for="inlineRadio1">남</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+										<label class="form-check-label" for="inlineRadio2">여</label>
+									</div>
+								</td>
 							</tr>
 						</tbody>
 					</table>
+					<br><br>
+					<h4>환불 정보</h4>
+					<br>
+					<table class="table">
+						<tbody class="table-group-divider">
+							<tr>
+								<th width="30" scope="col">예금주</th>
+								<th width="70" scope="col" style="text-align: left">김재이</th>
+							</tr>
+							<tr>
+								<th rowspan="2">계좌정보</th>
+								<td>
+									<select class="form-select" id="inputGroupSelect3">
+										<option selected>은행명을 선택하세요</option>
+										<option value="1">국민은행</option>
+										<option value="2">기업은행</option>
+										<option value="3">농협중앙회</option>
+										<option value="4">신한은행</option>
+										<option value="5">우리은행</option>
+										<option value="6">새마을금고</option>
+										<option value="7">하나은행</option>
+										<option value="8">우체국</option>
+									 </select>
+								</td>
+							</tr>
+							<tr>
+								<td><input class="form-control" type="text" placeholder="'-'없이 숫자만 입력하세요."></td>
+							</tr>
+						</tbody>
+					</table>
+					<br><br>
+					<button type="button" id="modbtn">개인정보수정</button>
 				</div>
 			</div>
 			<div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-			</div>
+				<br>
+				<div class="bbb">
+					<h4>기본 정보</h4>
+					<br>
+					<table class="table table-striped-columns">
+						<tbody class="table-group-divider">
+							<tr>
+								<th width="30" scope="col">아이디</th>
+								<td width="70" scope="col"><input class="form-control" id="notmod" "type="text" placeholder="ysw" disabled></td>
+							</tr>
+							<tr>
+								<th scope="row">이름</th>
+								<td><input class="form-control" id="notmod" type="text" placeholder="임시완" disabled></td>
+							</tr>
+							<tr>
+								<th scope="row">신규 비밀번호</th>
+								<td><input class="form-control" type="password" value="12345"></td>
+							</tr>
+							<tr>
+								<th scope="row">신규 비밀번호 확인</th>
+								<td><input class="form-control" type="password"></td>
+							</tr>
+							<tr>
+								<th scope="row">휴대폰 번호</th>
+								<td><input class="form-control" type="text" value="010-2222-3333" disabled readonly></td>
+							</tr>
+							<tr>
+								<th scope="row">이메일</th>
+								<td><input class="form-control" type="text" value="ysw@gmail.com" disabled readonly></td>
+							</tr>
+							<tr>
+								<th scope="row">개인정보 유효기간</th>
+								<td>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+										<label class="form-check-label" for="flexRadioDefault1">3년</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+										<label class="form-check-label" for="flexRadioDefault2">1년</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+										<label class="form-check-label" for="flexRadioDefault1">탈퇴 시 파기</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">닉네임</th>
+								<td><input class="form-control" type="text" value="null(선택사항)" disabled readonly></td>
+							</tr>
+							<tr>
+								<th scope="row">생년월일</th>
+								<td><input class="form-control" type="text" value="null(선택사항)" disabled readonly></td>
+							</tr>
+							<tr>
+								<th scope="row">성별</th>
+								<td>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+										<label class="form-check-label" for="inlineRadio1">남</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+										<label class="form-check-label" for="inlineRadio2">여</label>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<br><br>
+					<h4>환불 정보</h4>
+					<br>
+					<table class="table">
+						<tbody class="table-group-divider">
+							<tr>
+								<th width="30" scope="col">예금주</th>
+								<th width="70" scope="col" style="text-align: left">김재이</th>
+							</tr>
+							<tr>
+								<th rowspan="2">계좌정보</th>
+								<td>
+									<select class="form-select" id="inputGroupSelect3">
+										<option selected>은행명을 선택하세요</option>
+										<option value="1">국민은행</option>
+										<option value="2">기업은행</option>
+										<option value="3">농협중앙회</option>
+										<option value="4">신한은행</option>
+										<option value="5">우리은행</option>
+										<option value="6">새마을금고</option>
+										<option value="7">하나은행</option>
+										<option value="8">우체국</option>
+									 </select>
+								</td>
+							</tr>
+							<tr>
+								<td><input class="form-control" type="text" placeholder="'-'없이 숫자만 입력하세요."></td>
+							</tr>
+						</tbody>
+					</table>
+					<br><br>
+					<button type="button" id="modbtn">개인정보수정</button>
+				</div>
+			</div>			
 		</div>
 	</div>
 
