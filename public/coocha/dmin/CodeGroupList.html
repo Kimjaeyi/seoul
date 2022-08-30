@@ -46,10 +46,6 @@
 		max-width: 140px;
 	}
 	
-	#search_input {
-		width: 145px; 
-	}
-	
 	#search_btn {
 		margin: 0 0 0 15px;
 	}
@@ -173,27 +169,17 @@
 							</div>
 							<div class="row justify-content-end">
 								<div class="col-2">
-									<select class="form-select" id="inputGroupSelect1">
-										<option selected>구분</option>
-										<option value="1">MANAGER</option>
-										<option value="2">VVIP</option>
-										<option value="3">VIP</option>
-										<option value="4">일반</option>
-									 </select>
-								</div>
-								<div class="col-2">
-									<select class="form-select" id="inputGroupSelect1">
-										<option selected>탈퇴여부</option>
-										<option value="1">Y</option>
-										<option value="2">N</option>
-									 </select>
-								</div>
-								<div class="col-2">
 									<select class="form-select" id="inputGroupSelect3">
 										<option selected>날짜선택</option>
-										<option value="1">생년월일</option>
-										<option value="2">가입일</option>
+										<option value="1">등록일</option>
+										<option value="2">수정일</option>
 									</select>
+								</div>
+								<div class="col-2">
+									<input type="date" class="form-control">
+								</div>
+								<div class="col-1" style="max-width: 30px">
+									<font>~</font>
 								</div>
 								<div class="col-2">
 									<input type="date" class="form-control">
@@ -201,12 +187,12 @@
 								<div class="col-2">
 									<select class="form-select" id="inputGroupSelect2">
 										<option selected>선택</option>
-										<option value="1">이름</option>
-										<option value="2">이메일</option>
-										<option value="3">연락처</option>
+										<option value="1">코드그룹 코드</option>
+										<option value="2">코드그룹 이름(한글)</option>
+										<option value="3">코드그룹 이름(영어)</option>
 									 </select>
 								</div>
-								<div class="col-2">
+								<div class="col-3">
 									<input class="form-control" type="search" id="search_input" placeholder="검색어 입력">
 								</div>
 								<div class="col-1">
@@ -238,7 +224,7 @@
 							<tr data-tr_value = "1">
 								<td><input class="form-check-input" type="checkbox" name="check" value="1"></td>
 								<td scope="row">1</td>
-								<td></td>
+								<td>1</td>
 								<td>통신사</td>
 								<td>telecom</td>
 								<td>3</td>
@@ -248,7 +234,7 @@
 							<tr data-tr_value = "2">
 								<td><input class="form-check-input" type="checkbox" name="check" value="2"></td>
 								<td scope="row">2</td>
-								<td></td>
+								<td>2</td>
 								<td>이메일도메인</td>
 								<td>emailDomain</td>
 								<td>6</td>
@@ -258,7 +244,7 @@
 							<tr data-tr_value = "3">
 								<td><input class="form-check-input" type="checkbox" name="check" value="3"></td>
 								<td scope="row">3</td>
-								<td></td>
+								<td>3</td>
 								<td>배송비</td>
 								<td>shippingfee</td>
 								<td>4</td>
@@ -268,7 +254,7 @@
 							<tr data-tr_value = "4">
 								<td><input class="form-check-input" type="checkbox" name="check" value="4"></td>
 								<td scope="row">4</td>
-								<td></td>
+								<td>4</td>
 								<td>택배사</td>
 								<td>deliverymethod</td>
 								<td>4</td>
@@ -278,7 +264,7 @@
 							<tr data-tr_value = "5">
 								<td><input class="form-check-input" type="checkbox" name="check" value="5"></td>
 								<td scope="row">5</td>
-								<td></td>
+								<td>5</td>
 								<td>출고가능일</td>
 								<td>release</td>
 								<td>5</td>
@@ -288,7 +274,7 @@
 							<tr data-tr_value = "6">
 								<td><input class="form-check-input" type="checkbox" name="check" value="6"></td>
 								<td scope="row">6</td>
-								<td></td>
+								<td>6</td>
 								<td>배송가능지역</td>
 								<td>possible</td>
 								<td>3</td>
@@ -298,7 +284,7 @@
 							<tr data-tr_value = "7">
 								<td><input class="form-check-input" type="checkbox" name="check" value="7"></td>
 								<td scope="row">7</td>
-								<td></td>
+								<td>7</td>
 								<td>교환/반품배송비</td>
 								<td>exchangefee</td>
 								<td>3</td>
@@ -308,7 +294,7 @@
 							<tr data-tr_value = "8">
 								<td><input class="form-check-input" type="checkbox" name="check" value="8"></td>
 								<td scope="row">8</td>
-								<td></td>
+								<td>8</td>
 								<td>반품가능기간</td>
 								<td>refundterm</td>
 								<td>2</td>
@@ -318,7 +304,7 @@
 							<tr data-tr_value = "9">
 								<td><input class="form-check-input" type="checkbox" name="check" value="9"></td>
 								<td scope="row">9</td>
-								<td></td>
+								<td>9</td>
 								<td>진행상황</td>
 								<td>state</td>
 								<td>5</td>
@@ -328,7 +314,7 @@
 							<tr data-tr_value = "10">
 								<td><input class="form-check-input" type="checkbox" name="check" value="10"></td>
 								<td scope="row">10</td>
-								<td></td>
+								<td>10</td>
 								<td>문의종류</td>
 								<td>field</td>
 								<td>4</td>
@@ -367,16 +353,7 @@
 							<div class="row justify-content-end">
 								<div class="col-2">
 									<select class="form-select" id="inputGroupSelect1">
-										<option selected>구분</option>
-										<option value="1">MANAGER</option>
-										<option value="2">VVIP</option>
-										<option value="3">VIP</option>
-										<option value="4">일반</option>
-									 </select>
-								</div>
-								<div class="col-2">
-									<select class="form-select" id="inputGroupSelect1">
-										<option selected>탈퇴여부</option>
+										<option selected>사용여부</option>
 										<option value="1">Y</option>
 										<option value="2">N</option>
 									 </select>
@@ -384,9 +361,15 @@
 								<div class="col-2">
 									<select class="form-select" id="inputGroupSelect3">
 										<option selected>날짜선택</option>
-										<option value="1">생년월일</option>
-										<option value="2">가입일</option>
+										<option value="1">등록일</option>
+										<option value="2">수정일</option>
 									</select>
+								</div>
+								<div class="col-2">
+									<input type="date" class="form-control">
+								</div>
+								<div class="col-1" style="max-width: 30px">
+									<font>~</font>
 								</div>
 								<div class="col-2">
 									<input type="date" class="form-control">
@@ -394,12 +377,13 @@
 								<div class="col-2">
 									<select class="form-select" id="inputGroupSelect2">
 										<option selected>선택</option>
-										<option value="1">이름</option>
-										<option value="2">이메일</option>
-										<option value="3">연락처</option>
+										<option value="1">코드그룹 코드</option>
+										<option value="2">코드그룹 이름</option>
+										<option value="3">코드이름(한글)</option>
+										<option value="4">코드이름(영문)</option>
 									 </select>
 								</div>
-								<div class="col-2">
+								<div class="col-3">
 									<input class="form-control" type="search" id="search_input" placeholder="검색어 입력">
 								</div>
 								<div class="col-1">
