@@ -6,20 +6,13 @@
 	<title>CodeGroup</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="http://images.coocha.co.kr/static/css/coocha.css?ver=2022091023"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <style type="text/css">
 
 	@import url('css/font.css');
-	
-	h1 {
-		font-family: 'GilbeotRainbow';
-	}
-	
-	h4, #myTab {
-		font-family: 'MICEGothic Bold';
-	}
 	
 	a:link {
 			color:black;
@@ -56,7 +49,6 @@
 	
 	th, td {
 		text-align : center;
-		font-family: 'MICEGothic';
 		vertical-align: middle;
 	}
 	
@@ -64,7 +56,7 @@
 		padding: 20px;
 	}
 	
-	.member {
+	.abc {
 		margin: 2% 15%;
 	}
 	
@@ -78,11 +70,6 @@
 		float: right;
 	}
 	
-	.bbb table {
-		--bs-table-accent-bg: rgba(0, 0, 0, 0.05);
-		--bs-table-striped-bg: #ffffff;
-	}
-	
 	.nav-tabs {
 		--bs-nav-tabs-link-active-color: #6900EF;
 		--bs-nav-tabs-link-active-border-color: #6900EF #6900EF #fff; 
@@ -94,28 +81,6 @@
 	
 	.nav-link {
 		color : gray;
-	}
-	
-	.bbb {
-		margin: 5% 10%;
-	}
-	
-	.bbb td {
-		text-align: left;
-		padding: 15px;
-	}
-	
-	.ccc {
-		margin: 5% 10%;
-	}
-	
-	.ccc th {
-		background-color: rgba(0, 0, 0, 0.05);
-	}
-	
-	.ccc td {
-		text-align: left;
-		padding: 15px;
 	}
 	
 	.pagination {
@@ -140,206 +105,274 @@
 		font-family: 'MICEGothic Bold';
 	}
 	
+	.flex-column {
+		height: 100vh;
+		margin: 3% 0 0 0;
+	} 
+	
+	#lefttab {
+		height: 100px;
+		font-size: 1.4rem;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	.nav-link active {
+		color: #9154f3;
+	}
+	
 </style>
 	
 <body>
 
 <!-- start -->
-	<div class="abc">
-		<a href="../user/item/Mainpage.html">
-			<h1 style="margin: 30px 0 0 10%">coocha</h1>
-		</a>
-		<br><hr><br>
-		<div class="member">
-			<ul class="nav nav-tabs" id="myTab">
-				<li class="nav-item">
-					<a class="nav-link active" id="codegrouptab" aria-current="page" href="#">코드그룹 관리</a>
+	<div class="header" style="left: 0px;">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="/"><span class="blind">COOCHA</span></a>
+                <span class="title-category">카테고리</span>
+            </h1>
+
+            <div class="search">
+                <div class="search-input"><input type="search" class="input"></div>
+            </div>
+
+            <div class="hamburger">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+
+            <ul class="gnb login">
+				<li>
+					<a href="javascript:;" class="btn-my btn-layer-open"><span class="blind">MY</span></a>
+					<div class="area-my-page area-gnb-layer">
+					    <div class="title">MY PAGE</div>
+					    <ul>
+					        <li><div id="likeTab">내가 좋아요 한 상품</div></li>
+					        <li><a href="javascript:void(0);" id="viewTab">내가 본 상품</a></li>
+					        <li><a href="https://member.coocha.co.kr/member/join/myinfo.do">내 정보 수정</a></li>
+					        <li class="logout"><a href="javascript:fn_logout('');">로그아웃</a></li>
+					    </ul>
+					</div>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" id="codetab" href="CodeList.html">코드 관리</button>
+				<li><div class="btn-like"><span class="blind">좋아요</span></div></li>
+				<li>
+				    <div class="btn-sc btn-layer-open"><span class="blind">더보기</span></div>
+				    <div class="area-servic-center area-gnb-layer">
+				        <div class="title">고객센터</div>
+				        <ul>
+				            <li>공지사항</li>
+				            <li>FAQ</li>
+				            <li>1:1 문의</li>
+				        </ul>
+				    </div>
 				</li>
 			</ul>
-			<br>
-			<div class="searchhead">
-				<div class="row">
-					<div class="col-1">
-						<h5><b>검색분류</b></h5>
-					</div>
-					<div class="row justify-content-end">
-						<div class="col-2">
-							<select class="form-select" id="inputGroupSelect3">
-								<option selected>날짜선택</option>
-								<option value="1">등록일</option>
-								<option value="2">수정일</option>
-							</select>
-						</div>
-						<div class="col-2">
-							<input type="date" class="form-control">
-						</div>
-						<div class="col-1" style="max-width: 30px">
-							<font>~</font>
-						</div>
-						<div class="col-2">
-							<input type="date" class="form-control">
-						</div>
-						<div class="col-2">
-							<select class="form-select" id="inputGroupSelect2">
-								<option selected>선택</option>
-								<option value="1">코드그룹 코드</option>
-								<option value="2">코드그룹 이름(한글)</option>
-								<option value="3">코드그룹 이름(영어)</option>
-							 </select>
-						</div>
-						<div class="col-3">
-							<input class="form-control" type="search" id="search_input" placeholder="검색어 입력">
-						</div>
+        </div>
+    </div>
+    <br><br>
+	<div class="abc">
+		<div class="row">
+	    	<div class="col-3">
+	    		<nav class="nav flex-column">
+					<a class="nav-link active" aria-current="page" href="#" id="lefttab">코드그룹 관리</a>
+					<a class="nav-link" href="#" id="lefttab">코드 관리</a>
+					<a class="nav-link" href="#" id="lefttab">회원 관리</a>
+					<a class="nav-link" href="#" id="lefttab">상품 관리</a>
+				</nav>
+	    	</div>
+    		<div class="col-9">
+				<ul class="nav nav-tabs" id="myTab">
+					<li class="nav-item">
+						<a class="nav-link active" id="codegrouptab" aria-current="page" href="#">코드그룹 관리</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="codetab" href="CodeList.html">코드 관리</button>
+					</li>
+				</ul>
+				<br>
+				<div class="searchhead">
+					<div class="row">
 						<div class="col-1">
-							<button class="btn btn-outline-secondary" type="submit" id="search_btn">조회</button>
+							<h5><b>검색분류</b></h5>
+						</div>
+						<div class="row justify-content-end">
+							<div class="col-2">
+								<select class="form-select" id="inputGroupSelect3">
+									<option selected>날짜선택</option>
+									<option value="1">등록일</option>
+									<option value="2">수정일</option>
+								</select>
+							</div>
+							<div class="col-2">
+								<input type="date" class="form-control">
+							</div>
+							<div class="col-1" style="max-width: 30px">
+								<font>~</font>
+							</div>
+							<div class="col-2">
+								<input type="date" class="form-control">
+							</div>
+							<div class="col-2">
+								<select class="form-select" id="inputGroupSelect2">
+									<option selected>선택</option>
+									<option value="1">코드그룹 코드</option>
+									<option value="2">코드그룹 이름(한글)</option>
+									<option value="3">코드그룹 이름(영어)</option>
+								 </select>
+							</div>
+							<div class="col-3">
+								<input class="form-control" type="search" id="search_input" placeholder="검색어 입력">
+							</div>
+							<div class="col-1">
+								<button class="btn btn-outline-secondary" type="submit" id="search_btn">조회</button>
+							</div>
 						</div>
 					</div>
 				</div>
+				<h4>코드그룹관리</h4>
+				<button type="button" class="btn btn-danger" id="delbtn" style="margin: 0 0 0 20px"><i class="fa-solid fa-minus"></i></button>
+				<a href="CodeGroupForm.html">
+				<button type="button" class="btn btn-outline-success" id="regbtn"><i class="fa-solid fa-plus"></i></button>
+				</a>
+				<br><br>
+				<table class="table table-light table-striped table-hover">
+					<thead>
+						<tr>
+							<th scope="col"><input class="form-check-input" type="checkbox" name="check" id="allcheck"></th>
+							<th scope="col">번호</th>
+							<th scope="col">코드그룹 코드</th>
+							<th scope="col">코드그룹 이름(한글)</th>
+							<th scope="col">코드그룹 이름(영문)</th>
+							<th scope="col">코드개수</th>
+							<th scope="col">등록일</th>
+							<th scope="col">수정일</th>
+						</tr>
+					</thead>
+					<tbody class="table-group-divider">
+						<tr data-tr_value = "1">
+							<td><input class="form-check-input" type="checkbox" name="check" value="1"></td>
+							<td scope="row">1</td>
+							<td>1</td>
+							<td>통신사</td>
+							<td>telecom</td>
+							<td>3</td>
+							<td>2012-04-12</td>
+							<td>2012-04-12</td>
+						</tr>
+						<tr data-tr_value = "2">
+							<td><input class="form-check-input" type="checkbox" name="check" value="2"></td>
+							<td scope="row">2</td>
+							<td>2</td>
+							<td>이메일도메인</td>
+							<td>emailDomain</td>
+							<td>6</td>
+							<td>2012-04-12</td>
+							<td>2012-04-12</td>
+						</tr>
+						<tr data-tr_value = "3">
+							<td><input class="form-check-input" type="checkbox" name="check" value="3"></td>
+							<td scope="row">3</td>
+							<td>3</td>
+							<td>배송비</td>
+							<td>shippingfee</td>
+							<td>4</td>
+							<td>2012-04-12</td>
+							<td>2012-04-12</td>
+						</tr>
+						<tr data-tr_value = "4">
+							<td><input class="form-check-input" type="checkbox" name="check" value="4"></td>
+							<td scope="row">4</td>
+							<td>4</td>
+							<td>택배사</td>
+							<td>deliverymethod</td>
+							<td>4</td>
+							<td>2012-04-12</td>
+							<td>2012-04-12</td>
+						</tr>
+						<tr data-tr_value = "5">
+							<td><input class="form-check-input" type="checkbox" name="check" value="5"></td>
+							<td scope="row">5</td>
+							<td>5</td>
+							<td>출고가능일</td>
+							<td>release</td>
+							<td>5</td>
+							<td>2012-04-12</td>
+							<td>2012-04-12</td>
+						</tr>
+						<tr data-tr_value = "6">
+							<td><input class="form-check-input" type="checkbox" name="check" value="6"></td>
+							<td scope="row">6</td>
+							<td>6</td>
+							<td>배송가능지역</td>
+							<td>possible</td>
+							<td>3</td>
+							<td>2012-04-12</td>
+							<td>2012-04-12</td>
+						</tr>
+						<tr data-tr_value = "7">
+							<td><input class="form-check-input" type="checkbox" name="check" value="7"></td>
+							<td scope="row">7</td>
+							<td>7</td>
+							<td>교환/반품배송비</td>
+							<td>exchangefee</td>
+							<td>3</td>
+							<td>2012-04-12</td>
+							<td>2012-04-12</td>
+						</tr>
+						<tr data-tr_value = "8">
+							<td><input class="form-check-input" type="checkbox" name="check" value="8"></td>
+							<td scope="row">8</td>
+							<td>8</td>
+							<td>반품가능기간</td>
+							<td>refundterm</td>
+							<td>2</td>
+							<td>2012-04-12</td>
+							<td>2012-04-12</td>
+						</tr>
+						<tr data-tr_value = "9">
+							<td><input class="form-check-input" type="checkbox" name="check" value="9"></td>
+							<td scope="row">9</td>
+							<td>9</td>
+							<td>진행상황</td>
+							<td>state</td>
+							<td>5</td>
+							<td>2012-04-12</td>
+							<td>2012-04-12</td>
+						</tr>
+						<tr data-tr_value = "10">
+							<td><input class="form-check-input" type="checkbox" name="check" value="10"></td>
+							<td scope="row">10</td>
+							<td>10</td>
+							<td>문의종류</td>
+							<td>field</td>
+							<td>4</td>
+							<td>2012-04-12</td>
+							<td>2012-04-12</td>
+						</tr>
+					</tbody>
+				</table>
+				<br><br>
+				<nav aria-label="Page navigation example">
+					<ul class="pagination">
+						<li class="page-item">
+							<a class="page-link" href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						<li class="page-item active"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item">
+							<a class="page-link" href="#" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<br><br>
 			</div>
-			<h4>코드그룹관리</h4>
-			<button type="button" class="btn btn-danger" id="delbtn" style="margin: 0 0 0 20px"><i class="fa-solid fa-minus"></i></button>
-			<a href="CodeGroupForm.html">
-			<button type="button" class="btn btn-outline-success" id="regbtn"><i class="fa-solid fa-plus"></i></button>
-			</a>
-			<br><br>
-			<table class="table table-light table-striped table-hover">
-				<thead>
-					<tr>
-						<th scope="col"><input class="form-check-input" type="checkbox" name="check" id="allcheck"></th>
-						<th scope="col">번호</th>
-						<th scope="col">코드그룹 코드</th>
-						<th scope="col">코드그룹 이름(한글)</th>
-						<th scope="col">코드그룹 이름(영문)</th>
-						<th scope="col">코드개수</th>
-						<th scope="col">등록일</th>
-						<th scope="col">수정일</th>
-					</tr>
-				</thead>
-				<tbody class="table-group-divider">
-					<tr data-tr_value = "1">
-						<td><input class="form-check-input" type="checkbox" name="check" value="1"></td>
-						<td scope="row">1</td>
-						<td>1</td>
-						<td>통신사</td>
-						<td>telecom</td>
-						<td>3</td>
-						<td>2012-04-12</td>
-						<td>2012-04-12</td>
-					</tr>
-					<tr data-tr_value = "2">
-						<td><input class="form-check-input" type="checkbox" name="check" value="2"></td>
-						<td scope="row">2</td>
-						<td>2</td>
-						<td>이메일도메인</td>
-						<td>emailDomain</td>
-						<td>6</td>
-						<td>2012-04-12</td>
-						<td>2012-04-12</td>
-					</tr>
-					<tr data-tr_value = "3">
-						<td><input class="form-check-input" type="checkbox" name="check" value="3"></td>
-						<td scope="row">3</td>
-						<td>3</td>
-						<td>배송비</td>
-						<td>shippingfee</td>
-						<td>4</td>
-						<td>2012-04-12</td>
-						<td>2012-04-12</td>
-					</tr>
-					<tr data-tr_value = "4">
-						<td><input class="form-check-input" type="checkbox" name="check" value="4"></td>
-						<td scope="row">4</td>
-						<td>4</td>
-						<td>택배사</td>
-						<td>deliverymethod</td>
-						<td>4</td>
-						<td>2012-04-12</td>
-						<td>2012-04-12</td>
-					</tr>
-					<tr data-tr_value = "5">
-						<td><input class="form-check-input" type="checkbox" name="check" value="5"></td>
-						<td scope="row">5</td>
-						<td>5</td>
-						<td>출고가능일</td>
-						<td>release</td>
-						<td>5</td>
-						<td>2012-04-12</td>
-						<td>2012-04-12</td>
-					</tr>
-					<tr data-tr_value = "6">
-						<td><input class="form-check-input" type="checkbox" name="check" value="6"></td>
-						<td scope="row">6</td>
-						<td>6</td>
-						<td>배송가능지역</td>
-						<td>possible</td>
-						<td>3</td>
-						<td>2012-04-12</td>
-						<td>2012-04-12</td>
-					</tr>
-					<tr data-tr_value = "7">
-						<td><input class="form-check-input" type="checkbox" name="check" value="7"></td>
-						<td scope="row">7</td>
-						<td>7</td>
-						<td>교환/반품배송비</td>
-						<td>exchangefee</td>
-						<td>3</td>
-						<td>2012-04-12</td>
-						<td>2012-04-12</td>
-					</tr>
-					<tr data-tr_value = "8">
-						<td><input class="form-check-input" type="checkbox" name="check" value="8"></td>
-						<td scope="row">8</td>
-						<td>8</td>
-						<td>반품가능기간</td>
-						<td>refundterm</td>
-						<td>2</td>
-						<td>2012-04-12</td>
-						<td>2012-04-12</td>
-					</tr>
-					<tr data-tr_value = "9">
-						<td><input class="form-check-input" type="checkbox" name="check" value="9"></td>
-						<td scope="row">9</td>
-						<td>9</td>
-						<td>진행상황</td>
-						<td>state</td>
-						<td>5</td>
-						<td>2012-04-12</td>
-						<td>2012-04-12</td>
-					</tr>
-					<tr data-tr_value = "10">
-						<td><input class="form-check-input" type="checkbox" name="check" value="10"></td>
-						<td scope="row">10</td>
-						<td>10</td>
-						<td>문의종류</td>
-						<td>field</td>
-						<td>4</td>
-						<td>2012-04-12</td>
-						<td>2012-04-12</td>
-					</tr>
-				</tbody>
-			</table>
-			<br><br>
-			<nav aria-label="Page navigation example">
-				<ul class="pagination">
-					<li class="page-item">
-						<a class="page-link" href="#" aria-label="Previous">
-							<span aria-hidden="true">&laquo;</span>
-						</a>
-					</li>
-					<li class="page-item active"><a class="page-link" href="#">1</a></li>
-					<li class="page-item"><a class="page-link" href="#">2</a></li>
-					<li class="page-item"><a class="page-link" href="#">3</a></li>
-					<li class="page-item">
-						<a class="page-link" href="#" aria-label="Next">
-							<span aria-hidden="true">&raquo;</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-			<br><br>
 		</div>
 	</div>
 
@@ -371,36 +404,6 @@ $(document).ready(function() {
         }
     });
 });
-/* 	
-	button = document.querySelector('button');
-	input = document.getElementById('search_btn')
-
-	// 클릭,엔터키 이벤트 
-	input.focus()
-	input.addEventListener('keydown',function(e){
-	    if(e.key === "Enter"){
-	      Filter();
-	    }
-	})
-	button.addEventListener('click',Filter);
-
-	function Filter(){
-	    var search_btn , item , name
-	    
-	    search_btn = document.getElementById('search_btn').value.toUpperCase();
-	    item = document.getElementsByClassName('one_quarter')
-	    
-	  //indexOf()를 활용한 검색기능 구현
-	  for(i=0;i<item.length;i++){
-	      name = item[i].getElementsByClassName("name");
-	      if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
-	        item[i].style.display = "inline-block";
-	      }else{
-	        item[i].style.display = "none";
-	      }
-	    }
-	}	
- */	
 </script>
 <!-- end -->
 
