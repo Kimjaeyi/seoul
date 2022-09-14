@@ -28,7 +28,6 @@
 	}
 	
 	.searchhead{
-		font-family: 'MICEGothic';
 		padding: 15px;
 		margin: 10px 0 5% 0;
 		border-radius: 6px;
@@ -41,11 +40,7 @@
 	
 	#search_btn {
 		margin: 0 0 0 15px;
-	}
-	
-	input {
-		font-size: small;
-	}
+	} 
 	
 	th, td {
 		text-align : center;
@@ -115,6 +110,7 @@
 		font-size: 1.4rem;
 		font-weight: bold;
 		text-align: center;
+		vertical-align: middle;
 	}
 	
 	.nav-link active {
@@ -185,10 +181,10 @@
     		<div class="col-9">
 				<ul class="nav nav-tabs" id="myTab">
 					<li class="nav-item">
-						<a class="nav-link active" id="codegrouptab" aria-current="page" href="#">코드그룹 관리</a>
+						<button class="nav-link active" id="codegrouptab">코드그룹 관리</button>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" id="codetab" href="CodeList.html">코드 관리</button>
+						<button class="nav-link" id="codetab" href="CodeList.html">코드 관리</button>
 					</li>
 				</ul>
 				<br>
